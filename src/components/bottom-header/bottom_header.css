@@ -1,0 +1,31 @@
+.bottom-header {
+    border-top: solid 1px #ccc;
+    border-bottom: solid 1px #ccc;
+    position: sticky;
+    top: 0;
+    z-index: 24;
+    background: white;
+}
+.bottom-header .container-xxl{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.bottom-header ul {
+    gap: 15px;
+    margin: 13px 0;
+    padding: 0;
+}
+.bottom-header a.active {
+    background-color: red;
+}
+.bottom-header a {
+    position: relative;
+    display: block;
+}
+.bottom-header button {
+    background-color: transparent;
+    color: black;
+    border: none;
+    padding: 0;
+}

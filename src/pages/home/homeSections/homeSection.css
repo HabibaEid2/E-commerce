@@ -1,0 +1,48 @@
+.homeSections {
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+.homeSections .container-xxl .row {
+    margin-right: 0;
+}
+.homeSections .element {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+    position: relative;
+    transition: .4s;
+    top: 0;
+    font-size: 15px;
+}
+.homeSections .element:hover {
+    transition: .5s;
+    top: -10px;
+}
+.homeSections img {
+    width: 77px;
+}
+.homeSections .head {
+    font-size: 21px;
+    border-bottom: solid 2px #d1d1d1;
+    padding-bottom: 14px;
+    position: relative;
+}
+.homeSections .head::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 20%;
+    height:2px;
+    background-color: var(--main-color);
+    border: none;
+}
+.homeSections i {
+    font-size:12px ;
+}
+.homeSections .newPrice {
+    font-weight: bold;
+    font-size: 16px;
+}

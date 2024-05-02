@@ -1,0 +1,49 @@
+.featuresCats h3 {
+    margin: 40px 0;
+}
+.featuresCats .categories {
+    display: flex;
+    gap: 20px;
+}
+.featuresCats  .category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    padding: 7px 0;
+    width: 86px;
+    transition: .3s;
+}
+.featuresCats .category:nth-child(1) {
+    box-shadow: 0px 0px 10px #afafa5;
+}
+.featuresCats .category:hover {
+    box-shadow: 0px 0px 10px #afafa5;
+}
+.featuresCats img{
+    width: 50px;
+}
+.featuresCats .cat-title {
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.adds {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+.adds .add {
+    border-radius:10px ;
+    overflow: hidden;
+}
+.adds img {
+    width: 100%;
+    border-radius: 10px;
+    transition: .3s;
+}
+.add:hover img {
+    scale: 1.1;
+}

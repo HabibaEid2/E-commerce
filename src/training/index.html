@@ -1,0 +1,41 @@
+<html>
+ <head> </head>
+ <body>
+   <form onsubmit="validateForm(event)">
+     <label> Name </label>
+     <input type="text" id="name"> 
+     <label> Password </label>
+     <input type="password" id="password">
+     <label> Email </label>
+     <input type="email" id="email">
+     <button type="submit"> Submit <button>
+   </form>
+   <script> 
+   function validateForm(event){
+     event.preventDefault();
+
+     var nameInput = document.getElementById("name");
+     var passwordInput = document.getElementById("password");
+     var emailInput = document.getElementById("email");
+
+     var isValid = true;
+
+     if (nameInput.value === ""){
+      nameInput.style.backgroundColor = "blue";
+      isValid = false;
+     }
+     if (passwordInput.value === ""){
+      passwordInput.style.backgroundColor = "blue";
+      isValid = false;
+     } 
+     if (emailInput.value === ""){ 
+      emailInput.style.backgroundColor = "blue";
+      isValid = false;
+     }
+     if (isValid){
+      alert("Form submitted successfully");
+     }
+   }
+   </script>
+ </body>
+</html>

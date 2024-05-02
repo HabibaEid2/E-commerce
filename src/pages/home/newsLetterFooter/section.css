@@ -1,0 +1,23 @@
+.newsLetterFooter {
+    background-image: url(./../../../images/navBar3bg.png);
+    background-size: cover;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    border-radius: 14px;
+    margin: 40px auto;
+    padding:10px 20px ;
+    position: relative;
+}
+.newsLetterFooter::after {
+    content: "";
+    background-image: url(./../../../images/navBar3.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 50%;
+    height:90%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}

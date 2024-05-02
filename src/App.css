@@ -1,38 +1,62 @@
-.App {
-  text-align: center;
+html {
+    scroll-behavior: smooth;
+}
+:root {
+    --main-color : #3bb77e ; 
+    --p-color : #7e7e7e;
+    --font-color : #000000ba ; 
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    font-family: "Rubik", sans-serif;
+}
+ul {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.p-color {
+    color: var(--p-color);
+}
+.price {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.newPrice {
+    font-size: 20px;
+    color: var(--main-color);
+}
+.price .oldPrice {
+    text-decoration: line-through;
+    color: rgba(0, 0, 0, 0.404);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.call-center {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.call-center img {
+    width: 32px;
+    height: fit-content;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.call-center .phone {
+    color: var(--main-color) ; 
+    font-size: 20px;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.call-center p {
+    color: var(--p-color);
+    margin: 0;
+    font-size: 11px;
 }

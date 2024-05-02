@@ -1,0 +1,40 @@
+p {
+    padding: 0;
+    margin: 0;
+}
+.card {
+    transition: .4s ;
+    min-width: 250px;
+    height: fit-content;
+}
+.card:hover {
+    box-shadow: 0px 0px 10px #afafa5;
+}
+.card img {
+    height: 200px;
+    object-fit: contain;
+    padding: 10px;
+}
+.card .card-body {
+    display: flex;
+    flex-direction: column;
+}
+.card .brandOnHead {
+    color: var(--p-color);
+    font-size: 12px;
+}
+.card i[class*= "star"] {
+    color: #faaf00;
+}
+.card .bodyBrand {
+    margin: 10px;
+    color: var(--main-color);
+    font-size: 17px;
+}
+.card button {
+    background-color: #def9ec;
+    border: var(--main-color);
+    color: var(--main-color);
+    padding: 4px;
+    border-radius: 9px;
+}

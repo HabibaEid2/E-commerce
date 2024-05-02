@@ -1,0 +1,65 @@
+.navBar .carousel {
+    margin: 20px 0;
+}
+.navBar .carousel .carousel-item:nth-child(1) {
+    background-image: url(./../../../images/navBar-commerce.png);
+}
+.navBar .carousel .carousel-item:nth-child(2) {
+    background-image: url(./../../../images/navBar2-commerce.png);
+}
+.navBar .carousel .carousel-item {
+    background-size: cover;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    border-radius: 14px;
+    padding:0 10% ;
+}
+.newsLetterSection {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    text-align: left;
+}
+.newsLetterSection h3{
+    color: var(--font-color);
+    font-size: 4rem;
+}
+.newsLetterSection .subscribe-input {
+    border-radius: 27px;
+    border: none;
+    background-color: white;
+    width: fit-content;
+}
+.newsLetterSection .subscribe input {
+    border: none;
+    outline: none;
+}
+.newsLetterSection .subscribe button {
+    border: var(--main-color);
+    background-color: var(--main-color);
+    color: white;
+    padding: 15px;
+    border-radius: 27px;
+}
+.newsLetterSection .subscribe  p {
+    padding: 14px;
+}
+.newsLetterSection .subscribe i {
+    color: var(--font-color);
+    padding: 15px 10px 15px 22px;
+    font-size: 16px;
+}
+.navBar .carousel .carousel-caption a {
+    background-color: var(--main-color);
+    padding: 7px 12px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-top: 10px;
+}
+.navBar .carousel .carousel-indicators button {
+    width : 10px ; 
+    height: 10px;
+    border: solid 1px black;
+    border-radius: 50%;
+}
