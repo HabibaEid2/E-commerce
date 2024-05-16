@@ -1,16 +1,7 @@
-.big-parent {
-    background-color: rgb(147, 147, 147);
-    display: flex;
-    justify-content: center;
-}
-.parent {
-    background-color: yellow;
-    display: grid;
-    grid-template-columns: 1f 1fr;
-}
-.child {
-    width: 200px;
-    height: 200px;
+button {
     background-color: red;
-    border: solid 2px black;
+    color: white;
+}
+button:active {
+    background-color: green;
 }

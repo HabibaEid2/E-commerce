@@ -92,7 +92,7 @@ header button.sign-in {
 }
 header button.sign-in:hover {
     color: var(--main-color);
-    background-color:#def9ec ;
+    background-color:var(--babyGreen-color) ;
     border: solid 1px var(--main-color);
 }
 @media (max-width : 991px) {

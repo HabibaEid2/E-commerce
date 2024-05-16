@@ -1,0 +1,5 @@
+.modal-body .card {
+    flex-direction: row;
+    width: 100% !important;
+    align-items: center;
+}

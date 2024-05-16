@@ -5,13 +5,22 @@ import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { store } from './redux/store';
+import { GoogleOAuthProvider } from '@react-oauth/google';
+import CheckLogged from './context/Context';
+import CartContext from './context/CartContext';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <BrowserRouter>
-        <App/>
-      </BrowserRouter>
-    </Provider>
+    <GoogleOAuthProvider clientId='718890504784-ohnj72c567imf4a5dfboper9i0bj0gv4.apps.googleusercontent.com'>
+      <Provider store={store}>
+        <CartContext>
+          <CheckLogged>
+            <BrowserRouter>
+              <App/>
+            </BrowserRouter>
+          </CheckLogged>
+        </CartContext>
+      </Provider>
+    </GoogleOAuthProvider>
   </React.StrictMode>
 );

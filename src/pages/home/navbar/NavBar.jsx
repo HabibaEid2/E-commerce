@@ -5,7 +5,7 @@ export default function NavBar() {
     return (
         <div className="navBar">
             <Container fluid = "xxl">
-                <Carousel fade>
+                <Carousel fade controls = {false}>
                     <Carousel.Item>
                         <Carousel.Caption>
                         <Newsletter 

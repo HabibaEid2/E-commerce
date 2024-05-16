@@ -13,7 +13,11 @@
     display: flex;
     align-items: center;
     border-radius: 14px;
-    padding:0 10% ;
+}
+.carousel .carousel-caption {
+    padding: 3.25rem;
+    bottom: 0;
+    left: 0;
 }
 .newsLetterSection {
     position: relative;
@@ -23,7 +27,8 @@
 }
 .newsLetterSection h3{
     color: var(--font-color);
-    font-size: 4rem;
+    font-size: 5.5vw;
+    padding: 20px;
 }
 .newsLetterSection .subscribe-input {
     border-radius: 27px;

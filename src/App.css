@@ -3,8 +3,9 @@ html {
 }
 :root {
     --main-color : #3bb77e ; 
+    --babyGreen-color : #def9ec ; 
     --p-color : #7e7e7e;
-    --font-color : #000000ba ; 
+    --font-color : #1c1a1aba ; 
 }
 * {
     padding: 0;
@@ -59,4 +60,9 @@ a {
     color: var(--p-color);
     margin: 0;
     font-size: 11px;
+}
+[class *= btn].btn:active {
+    background-color: var(--babyGreen-color);
+    color: var(--main-color);
+    border-color: var(--babyGreen-color);
 }

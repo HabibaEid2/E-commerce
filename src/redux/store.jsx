@@ -1,5 +1,5 @@
 import { applyMiddleware, configureStore  } from "@reduxjs/toolkit";
-import { bestSells, productsData} from "./reducer";
+import { addToCart, bestSells, displayCart, productsData} from "./reducer";
 import { thunk } from "redux-thunk";
 
 export const store = configureStore({

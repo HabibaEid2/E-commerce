@@ -7,7 +7,7 @@ for(let i of data.productData[0].items) {
             dalsApulsesArr.push(
             <ProductCard
                 productName = {j.productName}
-                id = {i.products.indexOf(j)}
+                id = {j.id}
                 catImg = {j.catImg}
                 title = {`${j.productName.slice(0,30)}...`}
                 rating = {j.rating}
@@ -25,7 +25,7 @@ for(let i of data.productData[0].items) {
         for(let j of i.products) {
             gheeAoilsArr.push(<ProductCard
                 productName = {j.productName}
-                id = {i.products.indexOf(j)}
+                id = {j.id}
                 catImg = {j.catImg}
                 title = {`${j.productName.slice(0,30)}...`}
                 rating = {j.rating}
@@ -44,7 +44,7 @@ for(let i of data.productData[0].items) {
         for(let j of i.products) {
             masalas_spicesArr.push(<ProductCard
                 productName = {j.productName}
-                id = {i.products.indexOf(j)}
+                id = {j.id}
                 catImg = {j.catImg}
                 title = {`${j.productName.slice(0,30)}...`}
                 rating = {j.rating}
@@ -63,7 +63,7 @@ for(let i of data.productData[2].items) {
         for(let j of i.products) {
             menWWArr.push(<ProductCard
                 productName = {j.productName}
-                id = {i.products.indexOf(j)}
+                id = {j.id}
                 catImg = {j.catImg}
                 title = {`${j.productName.slice(0,30)}...`}
                 rating = {j.rating}
@@ -82,7 +82,7 @@ for(let i of data.productData[2].items) {
         for(let j of i.products) {
             womenWWArr.push(<ProductCard
                 productName = {j.productName}
-                id = {i.products.indexOf(j)}
+                id = {j.id}
                 catImg = {j.catImg}
                 title = {`${j.productName.slice(0,30)}...`}
                 rating = {j.rating}
@@ -100,7 +100,7 @@ for(let i of data.productData[1].items) {
         for(let j of i.products) {
             mobilesATArr.push(<ProductCard
                 productName = {j.productName}
-                id = {i.products.indexOf(j)}
+                id = {j.id}
                 catImg = {j.catImg}
                 title = {`${j.productName.slice(0,30)}...`}
                 rating = {j.rating}
@@ -118,7 +118,7 @@ for(let i of data.productData[0].items) {
         for(let j of i.products) {
             rice_productsArr.push(<ProductCard
                 productName = {j.productName}
-                id = {i.products.indexOf(j)}
+                id = {j.id}
                 catImg = {j.catImg}
                 title = {`${j.productName.slice(0,30)}...`}
                 rating = {j.rating}
@@ -136,7 +136,7 @@ for(let i of data.productData[1].items) {
         for(let j of i.products) {
             tvASpeakerArr.push(<ProductCard
                 productName = {j.productName}
-                id = {i.products.indexOf(j)}
+                id = {j.id}
                 catImg = {j.catImg}
                 title = {`${j.productName.slice(0,30)}...`}
                 rating = {j.rating}

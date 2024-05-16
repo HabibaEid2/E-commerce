@@ -1,0 +1,94 @@
+.register {
+    position: relative;
+}
+.register .content {
+    background-color: #f1f1f1;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.register [role = "alert"] {
+    position: absolute;
+    transition: .3s;
+}
+.register form {
+    background-color: white;
+    width: fit-content;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.register form h2 {
+    font-size: 27px;
+    font-weight:normal;
+}
+.register form > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    gap: 20px;
+    margin-top: 17px;
+}
+.register form input {
+    padding: 8px;
+    border-radius: 6px;
+    border: solid 1px #a7a7a7;
+    width: 270px;
+}
+.register form input:focus {
+    outline: none;
+}
+.register form i {
+    position: absolute;
+    right: 14px;
+    top: 14px;
+    cursor: pointer;
+}
+.register form button {
+    display: block;
+    color: white;
+    background-color: var(--main-color);
+    border: solid 1px var(--main-color);
+    border-radius: 3px;
+    padding: 7px;
+    margin: 20px auto;
+    width: 95%;
+    transition: .2s;
+}
+.register form button:hover {
+    color: var(--main-color);
+    background-color: var(--babyGreen-color);
+}
+.register form .spinner-border {
+    width : 1.4rem ; 
+    height: 1.4rem;
+}
+.register form .p-color {
+    width: fit-content;
+    margin: 10px auto;
+}
+.register form .google {
+    background: white;
+    border-color: blue;
+    color: black;
+    font-size: 13px;
+}
+.register form .google:hover {
+    background-color: #f1f1f1;
+    color: black;
+}
+.register form img {
+    width: 25px;
+    margin-right: 20px;
+}
+.register form a {
+    color: #007bff;
+    font-size: 14px;
+    font-weight: 500;
+}
+.register form .sign-up:hover {
+    text-decoration: underline;
+}

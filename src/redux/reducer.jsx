@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit"
-import { bestSellsA, dalsApulses, gheeAoils, masalas_spices, menWW, mobilesAT, rice_products, tvASpeaker, womenWW } from "./actions"
+import { addToCartA, arr, bestSellsA, cartArr, cartList, dalsApulses, displayCartA, gheeAoils, masalas_spices, menWW, mobilesAT, rice_products, tvASpeaker, womenWW } from "./actions"
 export const productsData = createSlice({
     name : "productsData" , 
     initialState : dalsApulses, 
@@ -59,5 +59,6 @@ export const bestSells = createSlice({
         } 
     }
 })
+
 export let {dalsApulsesF , gheeAoilsF  ,masalas_spicesF , menWWF , womenWWF , mobilesATF , rice_productsF , tvASpeakerF} = productsData.actions ;
 export let {bestSellsF} = bestSells.actions ;
