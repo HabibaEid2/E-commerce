@@ -6,15 +6,16 @@ import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Cookies from "universal-cookie";
 import { logged } from "../../context/Context";
-import { cartList } from "../../context/CartContext";
+import { useSelector } from "react-redux";
 export default function Top_Header() {
     let [menuDisplay , setMenuDisplay] = useState("none") ; 
     let [showFav, setShowFav] = useState(false);
     let [showCart, setShowCart] = useState(false);
-    let headerMenu = [] ; 
     let cookie = new Cookies() ; 
     let context = useContext(logged) ;
-    let cartContext = useContext(cartList) ; 
+    let cart_products = useSelector(state => state.cartList) ; 
+    let headerMenu = [] ; 
+    
     for(let i of data.productData) {
         for(let j of i.items) {
             headerMenu.push(<Dropdown.Item key={i.items.indexOf(j)} href="https://google.com">{j.cat_name} </Dropdown.Item>)
@@ -38,10 +39,6 @@ export default function Top_Header() {
     function logout() {
         cookie.remove("token")
         context.setValue(false)
-    }
-    function handleCart() {
-        setShowCart(true) ; 
-        console.log(cartContext.arr) ; 
     }
     return(
         <header>
@@ -92,8 +89,8 @@ export default function Top_Header() {
                         </div>
 
                         <div className="cartList">
-                            <Button variant="primary" onClick={handleCart}>
-                                <div className="userStateNum">0</div>
+                            <Button variant="primary" onClick={() => setShowCart(true)}>
+                                <div className="userStateNum">{cart_products.length}</div>
                                 <i className="fa-solid fa-cart-shopping"></i> Cart
                             </Button>
                             <Modal
@@ -108,7 +105,7 @@ export default function Top_Header() {
                                     </Modal.Title>
                                 </Modal.Header>
                                 <Modal.Body>
-                                    {cartContext.arr}
+                                    <div className="cartList">{cart_products}</div>
                                 </Modal.Body>
                                 <Modal.Footer>
                                     <Button onClick={() => setShowCart(false)}>Close</Button>

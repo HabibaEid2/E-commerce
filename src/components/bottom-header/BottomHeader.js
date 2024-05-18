@@ -1,4 +1,4 @@
-import { Container , NavLink, Nav} from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import './bottom_header.css'
 import data from './../../data/data'
@@ -21,36 +21,36 @@ export default function BottomHeader() {
             <Container fluid = "xxl">
                 <ul>
                     <li>
-                        <NavLink href = "/">Home</NavLink>
+                        <Link to = "/">Home</Link>
                     </li>
 
                     <li>
-                        <NavLink href= "groceries"><Dropdown>
+                        <Link to = "groceries"><Dropdown>
                             <Dropdown.Toggle variant="success" id="dropdown-basic">Grocerires</Dropdown.Toggle>
                                 <Dropdown.Menu>{groceriesList}</Dropdown.Menu>
                             </Dropdown>
-                        </NavLink>
+                        </Link>
                     </li>
 
                     <li>
-                        <NavLink href= "electronics"><Dropdown>
+                        <Link to= "electronics"><Dropdown>
                             <Dropdown.Toggle variant="success" id="dropdown-basic">Electronics</Dropdown.Toggle>
                                 <Dropdown.Menu>{eleList}</Dropdown.Menu>
                             </Dropdown>
-                        </NavLink>
+                        </Link>
                     </li>
                     <li>
-                        <NavLink href= "fashion"><Dropdown>
+                        <Link to= "fashion"><Dropdown>
                             <Dropdown.Toggle variant="success" id="dropdown-basic">Fashion</Dropdown.Toggle>
                                 <Dropdown.Menu>{fashionList}</Dropdown.Menu>
                             </Dropdown>
-                        </NavLink>
+                        </Link>
                     </li>
                     <li>
-                        <NavLink href= "shop">Shop</NavLink>
+                        <Link to= "shop">Shop</Link>
                     </li>
                     <li>
-                        <NavLink href= "check">Check Signin</NavLink>
+                        <Link to= "check">Check Signin</Link>
                     </li>
                 </ul>
                 <div className="call-center">

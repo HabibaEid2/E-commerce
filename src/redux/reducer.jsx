@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit"
-import { addToCartA, arr, bestSellsA, cartArr, cartList, dalsApulses, displayCartA, gheeAoils, masalas_spices, menWW, mobilesAT, rice_products, tvASpeaker, womenWW } from "./actions"
+import {bestSellsA,  dalsApulses,gheeAoils, masalas_spices, menWW, mobilesAT, rice_products, tvASpeaker, womenWW } from "./actions"
+import cloneDeep from "lodash.clonedeep"
 export const productsData = createSlice({
     name : "productsData" , 
     initialState : dalsApulses, 
@@ -60,5 +61,18 @@ export const bestSells = createSlice({
     }
 })
 
+let cloned ; 
+export const cartList = createSlice({
+    name : "cart" , 
+    initialState : [] , 
+    reducers : {
+        addToCartA : (state , action) => {
+            // Object.defineProperty(action.payload , )
+            state.push(action.payload) ; 
+            return state ; 
+        }
+    }
+})
 export let {dalsApulsesF , gheeAoilsF  ,masalas_spicesF , menWWF , womenWWF , mobilesATF , rice_productsF , tvASpeakerF} = productsData.actions ;
 export let {bestSellsF} = bestSells.actions ;
+export let {addToCartA} = cartList.actions ; 

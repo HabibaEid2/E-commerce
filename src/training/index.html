@@ -8,13 +8,6 @@
       padding: 10px;
     }
     
-    .selected {
-      background-image: url("https://images.pexels.com/photos/22858523/pexels-photo-22858523/free-photo-of-s-curve-chicago.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load");
-    }
-    
-    .default {
-      background-image: url("https://images.pexels.com/photos/19501709/pexels-photo-19501709/free-photo-of-black-and-white-shot-of-a-young-woman-standing-outside-in-the-dark-and-looking-away.jpeg");
-    }
   </style>
 </head>
 <body>
@@ -25,17 +18,20 @@
   </div>
   
   <script>
-    function changeBackgroundImage(item) {
-      var navbar = document.querySelector(".navbar");
-      
-      // Remove the "selected" class from all items
-      var items = navbar.getElementsByTagName("a");
-      for (var i = 0; i < items.length; i++) {
-        items[i].classList.remove("selected");
-      }
-      
-      // Add the "selected" class to the clicked item
-      item.classList.add("selected");
-    }
+    let arr = [1,2,3,4] ; 
+    let arrObj = [
+      {one : 1} , 
+      {two : 2} , 
+      {three : 3}
+    ]
+
+    console.log("arr => " , arr)
+    console.log("arr of obj => " , arrObj) ; 
+    console.log("=".repeat(20))
+    arr.splice(0 , 1)
+    console.log("arr => " , arr)
+    arrObj.splice(0 , 1)
+    console.log("arr of obj => " , arrObj) ; 
+
   </script>
 </body>

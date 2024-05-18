@@ -1,40 +1,32 @@
-import { useContext, useEffect, useState } from 'react';
+import {useEffect, useState } from 'react';
 import data from '../../data/data';
 import './product.css' ; 
 import { Button, Container } from 'react-bootstrap';
-import { cartList } from '../../context/CartContext';
 import CartProduct from '../../components/cartProduct/CartProduct';
 import Rate from '../../components/rate/Rate';
+import { useDispatch} from 'react-redux';
+import { addToCartA } from '../../redux/reducer';
 export default function Product() {
     let location = window.location.href.slice(window.location.href.lastIndexOf('/') + 1) ; 
     let [productObj , setProductObj] = useState({}) ; 
     let [active , setActive] = useState(0) ; 
-    let cartContext = useContext(cartList) ; 
+    let [sizeValue , setSize] = useState() ; 
+    let dispatch = useDispatch() ; 
+
+    let weight = [] ; 
     useEffect(() => {
         for(let i of data.productData) {
             for(let j of i.items) {
                 for(let r of j.products) {
-                    if (r.id == location) setProductObj(r) ; 
+                    if (r.id == location) {
+                        setProductObj(r)
+                        setSize(`${r.weight[0]}g`)
+                    } ; 
                 }
             }
         }
     } , [])
-    console.log(productObj)
 
-    function handleActive(e) {
-        setActive(e.target.id) ; 
-    }
-    function addToCart() {
-        cartContext.setArr((prev) => {
-            prev.push(<CartProduct 
-                id = {productObj.id} 
-                title = {productObj.productName}
-                description = {productObj.description}
-                img = {productObj.catImg}/>)
-                return prev ; 
-        })
-    }
-    let weight = [] ; 
     if (productObj.weight) {
         for(let i of productObj.weight) {
             weight.push(
@@ -47,8 +39,24 @@ export default function Product() {
             >{i}g</Button>)
         }
     }
+    function handleActive(e) {
+        setActive(e.target.id) ; 
+        setSize(e.target.innerHTML) ; 
+    }
 
-    
+    function handleAdditionToC () {
+        dispatch(addToCartA(
+            <CartProduct 
+            id = {productObj.id} 
+            img = {productObj.catImg}
+            title = {productObj.productName.slice(0 , 20)}
+            description = {`${productObj.description.slice(0 , 70)}...`} 
+            rating = {productObj.rating}
+            price = {productObj.price}
+            oldPrice = {productObj.oldPrice}
+            size = {sizeValue}
+            />)) ; 
+    }
 
     return (
         <div className="productData">
@@ -72,7 +80,7 @@ export default function Product() {
                         <div>{weight}</div>
                     </div>
                     <div className="addition">
-                        <Button className="add-to-cart" onClick={addToCart}>Add To Cart</Button>
+                        <Button className="add-to-cart" onClick={handleAdditionToC}>Add To Cart</Button>
                         <Button variant='light' className="fav">
                             <i className="fa-regular fa-heart"></i>
                         </Button>
