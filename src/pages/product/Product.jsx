@@ -4,16 +4,18 @@ import './product.css' ;
 import { Button, Container } from 'react-bootstrap';
 import CartProduct from '../../components/cartProduct/CartProduct';
 import Rate from '../../components/rate/Rate';
-import { useDispatch} from 'react-redux';
-import { addToCartA } from '../../redux/reducer';
+import { useDispatch, useSelector} from 'react-redux';
+import { addToCartA, cartList, removeFromCartA } from '../../redux/reducer';
 export default function Product() {
-    let location = window.location.href.slice(window.location.href.lastIndexOf('/') + 1) ; 
+    let location = +window.location.href.slice(window.location.href.lastIndexOf('/') + 1) ; 
     let [productObj , setProductObj] = useState({}) ; 
     let [active , setActive] = useState(0) ; 
     let [sizeValue , setSize] = useState() ; 
+    let [addedToCart , setAddedToCart] = useState(false) ; 
+    let list = useSelector(state => state.cartList) ; 
     let dispatch = useDispatch() ; 
-
     let weight = [] ; 
+    let index = list.findIndex((ele) => ele.id == location)
     useEffect(() => {
         for(let i of data.productData) {
             for(let j of i.items) {
@@ -45,6 +47,7 @@ export default function Product() {
     }
 
     function handleAdditionToC () {
+        setAddedToCart(true)
         dispatch(addToCartA(
             <CartProduct 
             id = {productObj.id} 
@@ -58,6 +61,11 @@ export default function Product() {
             />)) ; 
     }
 
+    function handleRemoveFromCart() {
+        setAddedToCart(false)
+        dispatch(removeFromCartA(index)) ; 
+        console.log(cartList)
+    }
     return (
         <div className="productData">
             <Container fluid = "xxl">
@@ -80,7 +88,11 @@ export default function Product() {
                         <div>{weight}</div>
                     </div>
                     <div className="addition">
+                        {addedToCart ? 
+                        <Button className="add-to-cart" onClick={handleRemoveFromCart}>remove from cart</Button> : 
                         <Button className="add-to-cart" onClick={handleAdditionToC}>Add To Cart</Button>
+                        }
+                        
                         <Button variant='light' className="fav">
                             <i className="fa-regular fa-heart"></i>
                         </Button>

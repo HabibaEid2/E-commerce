@@ -61,18 +61,20 @@ export const bestSells = createSlice({
     }
 })
 
-let cloned ; 
 export const cartList = createSlice({
     name : "cart" , 
     initialState : [] , 
     reducers : {
         addToCartA : (state , action) => {
-            // Object.defineProperty(action.payload , )
-            state.push(action.payload) ; 
+            state.push(action.payload) ;   
             return state ; 
+        } , 
+        removeFromCartA : (state , action) => {
+            state.splice(action.payload , 1) ; 
+            return state ;  
         }
     }
 })
 export let {dalsApulsesF , gheeAoilsF  ,masalas_spicesF , menWWF , womenWWF , mobilesATF , rice_productsF , tvASpeakerF} = productsData.actions ;
 export let {bestSellsF} = bestSells.actions ;
-export let {addToCartA} = cartList.actions ; 
+export let {addToCartA , removeFromCartA} = cartList.actions ; 

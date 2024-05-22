@@ -2,13 +2,11 @@ import { Button, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import './cartProduct.css'
 import Rate from "../rate/Rate";
-import { useSelector } from "react-redux";
-import cloneDeep from "lodash.clonedeep";
-import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { removeFromCartA } from "../../redux/reducer";
 export default function CartProduct(props) {
-    let cartList = useSelector(state => state.cartList) ; 
-    // let clonedList = cloneDeep(cartList) ; 
-    let [deleted , setDeleted] = useState(false) ; 
+    let cartList = useSelector(state => state.cartList) ;
+    let dispatch = useDispatch() ;
     let index ; 
     for(let i = 0 ; i< cartList.length ;i++) {
         if(cartList[i].props.id == props.id) {
@@ -16,17 +14,16 @@ export default function CartProduct(props) {
         }
     }
     function handleRemoveItem() {
-        setDeleted(true) ; 
-        // cartList.splice(index , 1) ; 
-        // console.log(cartList)
-        console.log(Object.getOwnPropertyDescriptor(cartList[index] , "key")) ; 
+        dispatch(removeFromCartA(index)) ; 
+        console.log(cartList)
     }
     return (
         <Link to={`products/${props.id}`} key = {props.id}>
-            <Card>
+            <Card title={props.description}>
                 <Card.Img variant="top" src={props.img} />
                 <Card.Body>
                     <Card.Title>{props.title}</Card.Title>
+                    <Card.Text>{`${props.description.slice(props.title.length , 100)}`}</Card.Text>
                     <Rate rate = {+props.rating}/>
                     <div className="size">
                         size : {props.size}
