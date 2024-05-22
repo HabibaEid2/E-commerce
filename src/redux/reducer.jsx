@@ -1,6 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit"
 import {bestSellsA,  dalsApulses,gheeAoils, masalas_spices, menWW, mobilesAT, rice_products, tvASpeaker, womenWW } from "./actions"
-import cloneDeep from "lodash.clonedeep"
 export const productsData = createSlice({
     name : "productsData" , 
     initialState : dalsApulses, 

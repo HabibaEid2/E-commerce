@@ -18,7 +18,7 @@ export default function CartProduct(props) {
         console.log(cartList)
     }
     return (
-        <Link to={`products/${props.id}`} key = {props.id}>
+        <Link to={`products/${props.id}`}>
             <Card title={props.description}>
                 <Card.Img variant="top" src={props.img} />
                 <Card.Body>

@@ -151,7 +151,7 @@ export const tvASpeaker = tvASpeakerArr ;
 
 let bestSellsArr = [] ;
 for(let i of data.productData) {
-    if(i.cat_name == "Electronics") {
+    if(i.cat_name==="Electronics") {
         for(let j of i.items) {
             for(let r of j.products) {
                 bestSellsArr.push(
