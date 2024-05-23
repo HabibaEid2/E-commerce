@@ -1,21 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <style>
-    .navbar {
-      background-color: #9ffffa;
-      color: #000000;
-      padding: 10px;
-    }
-    
-  </style>
+  <link rel="stylesheet" href="./index.css">
 </head>
 <body>
   
-  
+  <div class="parent">
+    <img src="https://images.pexels.com/photos/23719481/pexels-photo-23719481/free-photo-of-chrysanthemum-flower.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="">
+  </div>
   <script>
-    let arr = ["habiba" , "eid" , "fathy"] ; 
-    console.log(arr) ; 
-    console.log(arr.findIndex((ele) => ele== "eigd"))
+    let parent = document.querySelector(".parent") ; 
+    parent.onmousemove = () => {
+      console.log(pageX)
+    }
   </script>
 </body>

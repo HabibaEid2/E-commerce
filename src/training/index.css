@@ -1,7 +1,16 @@
-button {
-    background-color: red;
-    color: white;
+.parent {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    cursor: grab;
 }
-button:active {
-    background-color: green;
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.parent:hover img {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
 }

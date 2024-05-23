@@ -74,6 +74,22 @@ export const cartList = createSlice({
         }
     }
 })
+
+export const wishList = createSlice({
+    name : "wish list" , 
+    initialState : [] ,
+    reducers : {
+        addToWishList : (state , action) => {
+            state.push(action.payload) ; 
+            return state ; 
+        } , 
+        removeFromWishList : (state , action) => {
+            state.splice(action.payload , 1) ; 
+            return state ; 
+        }
+    }
+})
 export let {dalsApulsesF , gheeAoilsF  ,masalas_spicesF , menWWF , womenWWF , mobilesATF , rice_productsF , tvASpeakerF} = productsData.actions ;
 export let {bestSellsF} = bestSells.actions ;
 export let {addToCartA , removeFromCartA} = cartList.actions ; 
+export let {addToWishList , removeFromWishList} = wishList.actions ; 

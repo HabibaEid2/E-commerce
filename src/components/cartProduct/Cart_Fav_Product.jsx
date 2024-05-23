@@ -6,15 +6,22 @@ import { useDispatch, useSelector } from "react-redux";
 import { removeFromCartA } from "../../redux/reducer";
 export default function CartProduct(props) {
     let cartList = useSelector(state => state.cartList) ;
+    let favList = useSelector(state => state.wishList) ; 
     let dispatch = useDispatch() ;
-    let index ; 
+    let indexInCart ; 
+    let indexInFav ; 
     for(let i = 0 ; i< cartList.length ;i++) {
         if(cartList[i].props.id == props.id) {
-            index = i ; 
+            indexInCart = i ; 
         }
     }
-    function handleRemoveItem() {
-        dispatch(removeFromCartA(index)) ; 
+    for(let i = 0 ; i< favList.length ;i++) {
+        if(cartList[i].props.id == props.id) {
+            indexInFav = i ; 
+        }
+    }
+    function handleRemoveItemC() {
+        dispatch(removeFromCartA(indexInCart)) ; 
         console.log(cartList)
     }
     return (
@@ -32,7 +39,7 @@ export default function CartProduct(props) {
                         <div className="newPrice">Rs{props.price}</div>
                         <div className="oldPrice">Rs{props.oldPrice}</div>
                     </div>
-                    <Button onClick={handleRemoveItem} title = "remove"><i class="fa-solid fa-trash-can"></i></Button>
+                    <Button onClick={handleRemoveItemC} title = "remove"><i class="fa-solid fa-trash-can"></i></Button>
                 </Card.Body>
             </Card>
         </Link>

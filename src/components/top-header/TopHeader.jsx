@@ -14,6 +14,7 @@ export default function Top_Header() {
     let cookie = new Cookies() ; 
     let context = useContext(logged) ;
     let cart_products = useSelector(state => state.cartList) ; 
+    let favList = useSelector(state => state.wishList) ; 
     let headerMenu = [] ; 
     
     for(let i of data.productData) {
@@ -60,8 +61,8 @@ export default function Top_Header() {
                     <div className="userState">
                         <div className="wishList">
                             <Button variant="primary" onClick={() => setShowFav(true)}>
-                                <div className="userStateNum">0</div>
-                                <i className="fa-regular fa-heart"></i> Wish list
+                                <div className="userStateNum">{favList.length}</div>
+                                <i className="fa-regular fa-heart"></i> favorite
                             </Button>
                             <Modal
                                 show={showFav}
@@ -71,17 +72,10 @@ export default function Top_Header() {
                                 >
                                 <Modal.Header>
                                     <Modal.Title id="contained-modal-title-vcenter">
-                                    Modal heading
+                                    Favoriate List 
                                     </Modal.Title>
                                 </Modal.Header>
-                                <Modal.Body>
-                                    <h4>Centered Modal</h4>
-                                    <p>
-                                    Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-                                    dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
-                                    consectetur ac, vestibulum at eros.
-                                    </p>
-                                </Modal.Body>
+                                <Modal.Body>{favList}</Modal.Body>
                                 <Modal.Footer>
                                     <Button onClick={() => setShowFav(false)}>Close</Button>
                                 </Modal.Footer>
@@ -101,7 +95,7 @@ export default function Top_Header() {
                                 >
                                 <Modal.Header>
                                     <Modal.Title id="contained-modal-title-vcenter">
-                                    Modal heading
+                                    Cart List
                                     </Modal.Title>
                                 </Modal.Header>
                                 <Modal.Body>
