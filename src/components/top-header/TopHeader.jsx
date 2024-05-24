@@ -14,7 +14,7 @@ export default function Top_Header() {
     let cookie = new Cookies() ; 
     let context = useContext(logged) ;
     let cart_products = useSelector(state => state.cartList) ; 
-    let favList = useSelector(state => state.wishList) ; 
+    let favList = useSelector(state => state.favList) ; 
     let headerMenu = [] ; 
     
     for(let i of data.productData) {
@@ -62,7 +62,7 @@ export default function Top_Header() {
                         <div className="wishList">
                             <Button variant="primary" onClick={() => setShowFav(true)}>
                                 <div className="userStateNum">{favList.length}</div>
-                                <i className="fa-regular fa-heart"></i> favorite
+                                <i className="fa-regular fa-heart"></i> Favorite
                             </Button>
                             <Modal
                                 show={showFav}

@@ -2,11 +2,14 @@ import { Button, Card } from "react-bootstrap";
 import './card.css'
 import { Link } from "react-router-dom";
 import Rate from "../rate/Rate";
-import { useDispatch } from "react-redux";
-import { addToCartA } from "../../redux/reducer";
+import { useDispatch, useSelector } from "react-redux";
+import { addToCartA, removeFromCartA } from "../../redux/reducer";
 import CartProduct from "../cartProduct/Cart_Fav_Product";
+import { useEffect, useState } from "react";
 
 export default function ProductCard(props) {
+    let cartList = useSelector(state => state.cartList) ; 
+    let index = cartList.findIndex((ele) => ele.props.id === props.id) ; 
     let dispatch = useDispatch() ; 
     function addToCart(e) {
         dispatch(addToCartA(
@@ -19,9 +22,11 @@ export default function ProductCard(props) {
             rating = {props.rating}
             price = {props.price}
             oldPrice = {props.oldPrice}
+            place = "cart"
             />)) ; 
-
-        console.log(e.target.parentElement.parentElement.id) ; 
+    }
+    function removeFromCart () {
+        dispatch(removeFromCartA(index)) ;
     }
     return (
             <Card style={{ width: '13rem' }} title={props.productName} key = {props.id} id = {props.id} >
@@ -37,7 +42,10 @@ export default function ProductCard(props) {
                         <div className="newPrice">Rs{props.price}</div>
                         <div className="oldPrice">Rs{props.oldPrice}</div>
                     </div>
-                    <Button onClick={addToCart}><i className="fa-solid fa-cart-shopping"></i>Add</Button>
+                    {index === -1 ? 
+                    <Button onClick={addToCart}><i className="fa-solid fa-cart-shopping"></i> Add</Button>: 
+                    <Button onClick={removeFromCart}><i className="fa-solid fa-circle-check"></i> Added</Button>
+                    }
                 </Card.Body>
             </Card>
     )

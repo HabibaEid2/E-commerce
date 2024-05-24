@@ -4,11 +4,11 @@
     align-items: center;
     position: relative;
 }
-.cartList .card img {
+.modal-body .card img {
     width : 200px ; 
     object-fit: contain;
 }
-.cartList .card button {
+.modal-body .card button {
     background-color: #c03521;
     color: white;
     position: absolute;
@@ -17,18 +17,18 @@
     padding: 5px 0 5px 10px;
     border-radius: 0px 5px 0px 0px;
 }
-.cartList .card button:hover {
+.modal-body .card button:hover {
     background-color: rgba(165, 42, 42, 0.813);
     color: white;
 }
-.cartList .card button {
+.modal-body .card button {
     margin: 10px 0;
 }
-.cartList .card button i {
+.modal-body .card button i {
     margin-right: 10px;
 }
 @media (max-width : 500px) {
-    .cartList .card {
+    .modal-body .card {
         flex-wrap: wrap;
     }
 }

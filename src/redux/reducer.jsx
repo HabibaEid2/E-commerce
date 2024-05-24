@@ -75,15 +75,15 @@ export const cartList = createSlice({
     }
 })
 
-export const wishList = createSlice({
-    name : "wish list" , 
+export const favList = createSlice({
+    name : "fav_list" , 
     initialState : [] ,
     reducers : {
-        addToWishList : (state , action) => {
+        addToFavListA : (state , action) => {
             state.push(action.payload) ; 
             return state ; 
         } , 
-        removeFromWishList : (state , action) => {
+        removeFromFavListA : (state , action) => {
             state.splice(action.payload , 1) ; 
             return state ; 
         }
@@ -92,4 +92,4 @@ export const wishList = createSlice({
 export let {dalsApulsesF , gheeAoilsF  ,masalas_spicesF , menWWF , womenWWF , mobilesATF , rice_productsF , tvASpeakerF} = productsData.actions ;
 export let {bestSellsF} = bestSells.actions ;
 export let {addToCartA , removeFromCartA} = cartList.actions ; 
-export let {addToWishList , removeFromWishList} = wishList.actions ; 
+export let {addToFavListA , removeFromFavListA} = favList.actions ; 

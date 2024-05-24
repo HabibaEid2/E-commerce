@@ -5,19 +5,18 @@ import { Button, Container } from 'react-bootstrap';
 import CartProduct from '../../components/cartProduct/Cart_Fav_Product';
 import Rate from '../../components/rate/Rate';
 import { useDispatch, useSelector} from 'react-redux';
-import { addToCartA, addToWishList, removeFromCartA } from '../../redux/reducer';
+import { addToCartA, addToFavListA, removeFromCartA, removeFromFavListA } from '../../redux/reducer';
 export default function Product() {
     let location = +window.location.href.slice(window.location.href.lastIndexOf('/') + 1) ; 
     let [productObj , setProductObj] = useState({}) ; 
     let [active , setActive] = useState(0) ; 
     let [sizeValue , setSize] = useState() ; 
     let list = useSelector(state => state.cartList) ; 
-    let wishList = useSelector(state => state.wishList) ; 
+    let favList = useSelector(state => state.favList) ; 
     let dispatch = useDispatch() ; 
+    let indexInCart = list.findIndex((ele) => ele.props.id === location) ; 
+    let indexInFav = favList.findIndex((ele) => ele.props.id === location) ; 
     let weight = [] ; 
-    let indexInCart = list.findIndex((ele) => ele.props.id == location) ; 
-    let indexInFav = list.findIndex((ele) => ele.props.id == location) ; 
-    let product ; 
     useEffect(() => {
         for(let i of data.productData) {
             for(let j of i.items) {
@@ -42,7 +41,15 @@ export default function Product() {
             key = {productObj.weight.indexOf(i)}
             >{i}g</Button>)
         } ; 
-        product = <CartProduct
+    }
+    function handleActive(e) {
+        setActive(e.target.id) ; 
+        setSize(e.target.innerHTML) ; 
+    }
+
+    function handleAdditionToC () {
+        dispatch(addToCartA(
+            <CartProduct
                     key = {productObj.id} 
                     id = {productObj.id} 
                     img = {productObj.catImg}
@@ -52,24 +59,31 @@ export default function Product() {
                     price = {productObj.price}
                     oldPrice = {productObj.oldPrice}
                     size = {sizeValue}
-                    /> ; 
-    }
-    function handleActive(e) {
-        setActive(e.target.id) ; 
-        setSize(e.target.innerHTML) ; 
-    }
-
-    function handleAdditionToC () {
-        dispatch(addToCartA(product)) ; 
+                    place = "cart"
+                    /> 
+        )) ; 
     }
     function handleRemoveFromCart() {
         dispatch(removeFromCartA(indexInCart)) ; 
     }
     function handleAdditionToFav() {
-        dispatch(addToWishList(product))
+        dispatch(addToFavListA(
+            <CartProduct
+                    key = {productObj.id} 
+                    id = {productObj.id} 
+                    img = {productObj.catImg}
+                    title = {productObj.productName.slice(0 , 20)}
+                    description = {`${productObj.description.slice(0 , 70)}...`} 
+                    rating = {productObj.rating}
+                    price = {productObj.price}
+                    oldPrice = {productObj.oldPrice}
+                    size = {sizeValue}
+                    place = "fav"
+                    /> 
+        ))
     }
     function handleRemoveFromFav() {
-        dispatch(addToWishList(indexInFav))
+        dispatch(removeFromFavListA(indexInFav))
     }
     return (
         <div className="productData">
@@ -82,7 +96,7 @@ export default function Product() {
                     <div className="rate">{<Rate rate = {+productObj.rating}/>}<span className='p-color'>(32) reviews</span></div>
                     <div className="price">
                         <div className="newPrice">Rs {productObj.price}</div>
-                        <div className="oldPriceAD">
+                        <div className ="oldPriceAD">
                             <div className="discount">{productObj.discount}% Off</div>
                             <div className="oldPrice">Rs {productObj.oldPrice}</div>
                         </div>
@@ -98,7 +112,7 @@ export default function Product() {
                         <Button className="add-to-cart" onClick={handleAdditionToC}>Add To Cart</Button>
                         }
                         
-                        {indexInFav != -1 ? 
+                        {indexInFav === -1 ? 
                             <Button className="add-to-cart" onClick={handleAdditionToFav}><i className="fa-regular fa-heart"></i></Button> : 
                             <Button className="add-to-cart" onClick={handleRemoveFromFav}><i className="fa-solid fa-heart"></i></Button>
                         }

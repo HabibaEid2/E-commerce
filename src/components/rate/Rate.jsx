@@ -1,35 +1,35 @@
 export default function Rate(props) {
-    let $3_5 = <div className="rate">
+    let $3_5 = <span className="rate">
         <i className="fa-solid fa-star"></i>
         <i className="fa-solid fa-star"></i>
         <i className="fa-solid fa-star"></i>
         <i className="fa-solid fa-star-half-stroke"></i>
         <i className="fa-regular fa-star"></i>
-    </div>
+    </span>
 
-    let $4$4_2 = <div className="rate">
+    let $4$4_2 = <span className="rate">
         <i className="fa-solid fa-star"></i>
         <i className="fa-solid fa-star"></i>
         <i className="fa-solid fa-star"></i>
         <i className="fa-solid fa-star"></i>
         <i className="fa-regular fa-star"></i>
-    </div>
+    </span>
 
-    let $4_5 = <div className="rate">
+    let $4_5 = <span className="rate">
         <i className="fa-solid fa-star"></i>
         <i className="fa-solid fa-star"></i>
         <i className="fa-solid fa-star"></i>
         <i className="fa-solid fa-star"></i>
         <i className="fa-solid fa-star-half-stroke"></i>
-    </div>
+    </span>
 
-    let $5= <div className="rate">
+    let $5= <span className="rate">
         <i className="fa-solid fa-star"></i>
         <i className="fa-solid fa-star"></i>
         <i className="fa-solid fa-star"></i>
         <i className="fa-solid fa-star"></i>
         <i className="fa-solid fa-star"></i>
-    </div>
+    </span>
 
     return (props.rate==3.5?$3_5 
         :props.rate == 4 || props.rate == 4 ?$4$4_2 

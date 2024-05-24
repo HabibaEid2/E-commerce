@@ -1,5 +1,5 @@
 import { applyMiddleware, configureStore  } from "@reduxjs/toolkit";
-import {bestSells, cartList, productsData, wishList} from "./reducer";
+import {favList, bestSells, cartList, productsData} from "./reducer";
 import { thunk } from "redux-thunk";
 
 export const store = configureStore({
@@ -7,7 +7,7 @@ export const store = configureStore({
         productsData : productsData.reducer , 
         bestSells : bestSells.reducer , 
         cartList : cartList.reducer , 
-        wishList : wishList.reducer , 
+        favList : favList.reducer , 
     } ,
     middleware: (getDefaultMiddleware) => getDefaultMiddleware({
         serializableCheck: false,

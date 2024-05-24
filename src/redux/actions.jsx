@@ -5,7 +5,7 @@ for(let i of data.productData[0].items) {
     if(i.cat_name === "dals and pulses") {
         for(let j of i.products) {
             dalsApulsesArr.push(
-            <ProductCard description = {j.description}
+            <ProductCard key = {j.id} description = {j.description}
                 productName = {j.productName}
                 id = {j.id}
                 catImg = {j.catImg}
@@ -23,7 +23,7 @@ let gheeAoilsArr = [] ;
 for(let i of data.productData[0].items) {
     if(i.cat_name === "Ghee & Oils") {
         for(let j of i.products) {
-            gheeAoilsArr.push(<ProductCard description = {j.description}
+            gheeAoilsArr.push(<ProductCard key = {j.id} description = {j.description}
                 productName = {j.productName}
                 id = {j.id}
                 catImg = {j.catImg}
@@ -42,7 +42,7 @@ let masalas_spicesArr = [] ;
 for(let i of data.productData[0].items) {
     if(i.cat_name === "masalas spices") {
         for(let j of i.products) {
-            masalas_spicesArr.push(<ProductCard description = {j.description}
+            masalas_spicesArr.push(<ProductCard key = {j.id} description = {j.description}
                 productName = {j.productName}
                 id = {j.id}
                 catImg = {j.catImg}
@@ -61,7 +61,7 @@ let menWWArr = [] ;
 for(let i of data.productData[2].items) {
     if(i.cat_name === "Men Western Wear") {
         for(let j of i.products) {
-            menWWArr.push(<ProductCard description = {j.description}
+            menWWArr.push(<ProductCard key = {j.id} description = {j.description}
                 productName = {j.productName}
                 id = {j.id}
                 catImg = {j.catImg}
@@ -80,7 +80,7 @@ let womenWWArr = [] ;
 for(let i of data.productData[2].items) {
     if(i.cat_name === "Women Western Wear") {
         for(let j of i.products) {
-            womenWWArr.push(<ProductCard description = {j.description}
+            womenWWArr.push(<ProductCard key = {j.id} description = {j.description}
                 productName = {j.productName}
                 id = {j.id}
                 catImg = {j.catImg}
@@ -98,7 +98,7 @@ let mobilesATArr = [] ;
 for(let i of data.productData[1].items) {
     if(i.cat_name === "Mobiles & Tablets") {
         for(let j of i.products) {
-            mobilesATArr.push(<ProductCard description = {j.description}
+            mobilesATArr.push(<ProductCard key = {j.id} description = {j.description}
                 productName = {j.productName}
                 id = {j.id}
                 catImg = {j.catImg}
@@ -116,7 +116,7 @@ let rice_productsArr = [] ;
 for(let i of data.productData[0].items) {
     if(i.cat_name === "Rice & Rice Products") {
         for(let j of i.products) {
-            rice_productsArr.push(<ProductCard description = {j.description}
+            rice_productsArr.push(<ProductCard key = {j.id} description = {j.description}
                 productName = {j.productName}
                 id = {j.id}
                 catImg = {j.catImg}
@@ -134,7 +134,7 @@ let tvASpeakerArr = [] ;
 for(let i of data.productData[1].items) {
     if(i.cat_name === "TV & Speaker") {
         for(let j of i.products) {
-            tvASpeakerArr.push(<ProductCard description = {j.description}
+            tvASpeakerArr.push(<ProductCard key = {j.id} description = {j.description}
                 productName = {j.productName}
                 id = {j.id}
                 catImg = {j.catImg}
@@ -155,7 +155,7 @@ for(let i of data.productData) {
         for(let j of i.items) {
             for(let r of j.products) {
                 bestSellsArr.push(
-                <ProductCard  description = {j.description}
+                <ProductCard key = {r.id} description = {r.description}
                     productName = {r.productName}
                     catImg = {r.catImg}
                     title = {`${r.productName.slice(0,30)}...`}
