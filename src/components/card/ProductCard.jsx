@@ -5,7 +5,6 @@ import Rate from "../rate/Rate";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCartA, removeFromCartA } from "../../redux/reducer";
 import CartProduct from "../cartProduct/Cart_Fav_Product";
-import { useEffect, useState } from "react";
 
 export default function ProductCard(props) {
     let cartList = useSelector(state => state.cartList) ; 
