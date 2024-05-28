@@ -10,6 +10,7 @@ import SignIn from './pages/register/SignIn';
 import SignUp from './pages/register/SignUp';
 import Product from './pages/product/Product';
 import './App.css';
+import Items from './pages/items/Items';
 function App() {
   return (
     <>
@@ -18,6 +19,7 @@ function App() {
       <Routes>
         <Route path='/' element = {<Home/>}/>
         <Route path='/products/:id' element = {<Product/>}/>
+        <Route path='/cat/*' element = {<Items/>}/>
         <Route path='sign-in' element = {<SignIn/>}/>
         <Route path='sign-up' element = {<SignUp/>}/>
       </Routes>

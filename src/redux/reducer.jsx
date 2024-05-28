@@ -1,50 +1,54 @@
 import { createSlice } from "@reduxjs/toolkit"
-import {bestSellsA,  dalsApulses,gheeAoils, masalas_spices, menWW, mobilesAT, rice_products, tvASpeaker, womenWW } from "./actions"
+import {bestSellsA,  dalsApulses } from "./actions"
+import data from "../data/data"
+import ProductCard from "../components/card/ProductCard";
 export const productsData = createSlice({
-    name : "productsData" , 
+    name : [] , 
     initialState : dalsApulses, 
     reducers : {
-        dalsApulsesF : () => {
-            return {
-                type : dalsApulses
+        productsInHomeA : (state , action) => {
+            let index = data.productData.findIndex(ele => ele.cat_name === action.payload.catName) ; 
+            let subCat = action.payload.subCat ; 
+            state = [] ; 
+            for(let i of data.productData[index].items) {
+                if(i.cat_name === subCat || subCat === "all") {
+                    for(let j of i.products) {
+                        state.push(
+                        <ProductCard key = {j.id} description = {j.description}
+                            productName = {j.productName}
+                            id = {j.id}
+                            catImg = {j.catImg}  
+                            title = {`${j.productName.slice(0,30)}...`}
+                            rating = {j.rating}
+                            brand = {j.brand}
+                            price = {j.price}
+                            oldPrice = {j.oldPrice}
+                            />)
+                        }
+                    }
             }
+            return state ; 
         } , 
-        gheeAoilsF : () => {
-            return {
-                type : gheeAoils , 
+        mainCatsA : (state , action) => {
+            state = [] ; 
+            let index = data.productData.findIndex(ele => ele.cat_name === action.payload.type) ; 
+            for(let i of data.productData[index].items) {
+                for(let j of i.products) {
+                    state.push(
+                        <ProductCard key = {j.id} description = {j.description}
+                            productName = {j.productName}
+                            id = {j.id}
+                            catImg = {j.catImg}  
+                            title = {`${j.productName.slice(0,30)}...`}
+                            rating = {j.rating}
+                            brand = {j.brand}
+                            price = {j.price}
+                            oldPrice = {j.oldPrice}
+                    />) ; 
+                }
             }
-        } , 
-        masalas_spicesF :() => {
-            return {
-                type : masalas_spices , 
-            }
-        } , 
-        menWWF : () => {
-            return {
-                type : menWW , 
-            }
-        } , 
-        womenWWF : () => {
-            return {
-                type : womenWW , 
-            }
-        } , 
-        mobilesATF : () => {
-            return {
-                type : mobilesAT , 
-            }
-        } , 
-        rice_productsF : () => {
-            return {
-                type : rice_products , 
-            }
-        } ,  
-        tvASpeakerF : () => {
-            return {
-                type : tvASpeaker , 
-            }
-        } ,  
-        
+            return state ; 
+        }
     } 
 })
 
@@ -89,7 +93,7 @@ export const favList = createSlice({
         }
     }
 })
-export let {dalsApulsesF , gheeAoilsF  ,masalas_spicesF , menWWF , womenWWF , mobilesATF , rice_productsF , tvASpeakerF} = productsData.actions ;
+export let {productsInHomeA , mainCatsA} = productsData.actions ; 
 export let {bestSellsF} = bestSells.actions ;
 export let {addToCartA , removeFromCartA} = cartList.actions ; 
 export let {addToFavListA , removeFromFavListA} = favList.actions ; 

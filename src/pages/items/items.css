@@ -1,0 +1,81 @@
+.items h1 {
+    padding: 34px 25px;
+    background-color: #d1eada;
+    margin: 10px;
+    border-radius: 18px;
+    font-family: "Caveat", cursive;
+}
+.items .dashboard .dash-section {
+    display: block;
+    padding: 20px;
+    margin: 0 0 0 20px;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.items .dashboard .dash-title {
+    font-family: "Caveat", cursive;
+    border-bottom: solid 2px #efefef;
+    padding-bottom: 5px;
+    margin-bottom: 18px;
+    position: relative;
+    font-size: 22px;
+    font-weight: bold;
+}
+.items .dashboard .dash-title::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 26%;
+    height: 2px;
+    background-color: #badec7;
+}
+.items .dashboard .cat-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 7px;
+    border: solid 1px #e8e8e8;
+    margin: 10px 0;
+    border-radius: 3px;
+}
+.items .dashboard .numOfItems {
+    width: 25px;
+    height: 25px;
+    background-color: #fdc040;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.items .dashboard .categories img {
+    width: 20px;
+}
+.items .content {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 20px;
+}
+.items .sub-cats input{
+    margin: 10px 0;
+}
+.items .sub-cats label {
+    margin-left: 10px;
+}
+.items .filterCats .dash-title {
+    margin-top: 30px;
+    /* font-size: 19px; */
+}
+
+/* products */
+.items .products p {
+    color: #6f6f6f;
+}
+.items .products span {
+    color: var(--main-color);
+}
+.items .products-items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}

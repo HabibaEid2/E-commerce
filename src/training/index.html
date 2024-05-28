@@ -8,10 +8,14 @@
   <div class="parent">
     <img src="https://images.pexels.com/photos/23719481/pexels-photo-23719481/free-photo-of-chrysanthemum-flower.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="">
   </div>
+
+  <div class="range">
+    <input type="range" min = "10" max = "50">
+  </div>
   <script>
-    let parent = document.querySelector(".parent") ; 
-    parent.onmousemove = () => {
-      console.log(pageX)
+    let range = document.querySelector(".range input") ; 
+    range.onchange = (e) => {
+      console.log(e.target.value)
     }
   </script>
 </body>

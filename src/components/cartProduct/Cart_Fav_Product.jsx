@@ -53,5 +53,5 @@ export default function CartProduct(props) {
                 <Button title = "remove"><i class="fa-solid fa-trash-can" onClick={getPlace}></i></Button>
             </Card.Body>
         </Card>
-    )
+)
 }
