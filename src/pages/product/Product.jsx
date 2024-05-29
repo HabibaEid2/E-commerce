@@ -35,7 +35,7 @@ export default function Product() {
             weight.push(
             <Button 
             variant='light' 
-            className={active == productObj.weight.indexOf(i) ? 'active' : null} 
+            className={active == productObj.weight.indexOf(i) ? 'mainButton' : null} 
             id = {productObj.weight.indexOf(i)} 
             onClick={handleActive}
             key = {productObj.weight.indexOf(i)}
@@ -108,13 +108,13 @@ export default function Product() {
                     </div>
                     <div className="addition">
                         {indexInCart !== -1 ? 
-                        <Button className="add-to-cart" onClick={handleRemoveFromCart}>remove from cart</Button> : 
-                        <Button className="add-to-cart" onClick={handleAdditionToC}>Add To Cart</Button>
+                        <Button className = "btn mainButton" onClick={handleRemoveFromCart}><i className="fa-solid fa-circle-check"></i> Added</Button>: 
+                        <Button className = "btn mainButton" onClick={handleAdditionToC}><i className="fa-solid fa-cart-shopping"></i> Add to cart</Button>
                         }
                         
                         {indexInFav === -1 ? 
-                            <Button className="add-to-cart" onClick={handleAdditionToFav}><i className="fa-regular fa-heart"></i></Button> : 
-                            <Button className="add-to-cart" onClick={handleRemoveFromFav}><i className="fa-solid fa-heart"></i></Button>
+                            <Button className="fav-btn" onClick={handleAdditionToFav}><i className="fa-regular fa-heart"></i></Button> : 
+                            <Button className="fav-btn" onClick={handleRemoveFromFav}><i className="fa-solid fa-heart"></i></Button>
                         }
                     </div>
                 </div>

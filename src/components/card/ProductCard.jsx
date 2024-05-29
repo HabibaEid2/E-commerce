@@ -33,7 +33,7 @@ export default function ProductCard(props) {
                 <Card.Body>
                     <div className="brandOnHead"></div>
                     <Card.Title>
-                    <Link to={`products/${props.id}`}>{props.title}</Link>
+                    <Link to={`/products/${props.id}`}>{props.title}</Link>
                     </Card.Title>
                     <Card.Text>{<Rate rate = {+props.rating}/>}</Card.Text>
                     <Card.Text>By<span className="bodyBrand">{props.brand}</span></Card.Text>

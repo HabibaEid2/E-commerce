@@ -1,7 +1,10 @@
 import { Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import './bottom_header.css'
+import { useDispatch } from "react-redux";
+import { mainCatsA } from "../../redux/reducer";
 export default function BottomHeader() {
+    let dispatch = useDispatch() ; 
     return (
         <div className="bottom-header">
             <Container fluid = "xxl">
@@ -9,14 +12,14 @@ export default function BottomHeader() {
                     <li>
                         <Link to = "/">Home</Link>
                     </li>
-                    <li>
+                    <li onClick={() => dispatch(mainCatsA({type : "groceries"}))}>
                         <Link to = "cat/groceries">Grocerires</Link>
                     </li>
 
-                    <li>
+                    <li onClick={() => dispatch(mainCatsA({type : "Electronics"}))}>
                         <Link to= "cat/Electronics">Electronics</Link>
                     </li>
-                    <li>
+                    <li onClick={() => dispatch(mainCatsA({type : "Fashion"}))}>
                         <Link to= "cat/Fashion">Fashion</Link>
                     </li>
                     <li>

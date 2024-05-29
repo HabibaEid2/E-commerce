@@ -28,6 +28,9 @@ a {
 .p-color {
     color: var(--p-color);
 }
+.mainTitle {
+    font-family: "Caveat", cursive;
+}
 .price {
     display: flex;
     flex-wrap: wrap;
@@ -65,4 +68,9 @@ a {
     background-color: var(--babyGreen-color);
     color: var(--main-color);
     border-color: var(--babyGreen-color);
+}
+button.mainButton {
+    color: white;
+    background-color: var(--main-color);
+    border-color: var(--main-color);
 }

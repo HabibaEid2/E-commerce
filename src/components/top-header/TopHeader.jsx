@@ -1,5 +1,4 @@
 import { Button, CloseButton, Container , Dropdown ,DropdownButton, Modal} from "react-bootstrap";
-import './top_header.css'
 import data from '../../data/data'
 import logo from './../../images/logo.svg'
 import { useContext, useEffect, useState } from "react";
@@ -7,6 +6,7 @@ import { Link } from "react-router-dom";
 import Cookies from "universal-cookie";
 import { logged } from "../../context/Context";
 import { useSelector } from "react-redux";
+import './top_header.css'
 export default function Top_Header() {
     let [menuDisplay , setMenuDisplay] = useState("none") ; 
     let [showFav, setShowFav] = useState(false);
@@ -60,9 +60,9 @@ export default function Top_Header() {
                     </div>
                     <div className="userState">
                         <div className="wishList">
-                            <Button variant="primary" onClick={() => setShowFav(true)}>
+                            <Button className = "btn mainButton" onClick={() => setShowFav(true)}>
                                 <div className="userStateNum">{favList.length}</div>
-                                <i className="fa-regular fa-heart"></i> Favorite
+                                <i className="fa-solid fa-heart"></i> Favorite
                             </Button>
                             <Modal
                                 show={showFav}
@@ -77,13 +77,13 @@ export default function Top_Header() {
                                 </Modal.Header>
                                 <Modal.Body>{favList}</Modal.Body>
                                 <Modal.Footer>
-                                    <Button onClick={() => setShowFav(false)}>Close</Button>
+                                    <Button class = "btn mainButton" onClick={() => setShowFav(false)}>Close</Button>
                                 </Modal.Footer>
                             </Modal>
                         </div>
 
                         <div className="cartList">
-                            <Button variant="primary" onClick={() => setShowCart(true)}>
+                            <Button className = "btn mainButton" onClick={() => setShowCart(true)}>
                                 <div className="userStateNum">{cart_products.length}</div>
                                 <i className="fa-solid fa-cart-shopping"></i> Cart
                             </Button>
@@ -107,9 +107,9 @@ export default function Top_Header() {
                             </Modal>
                         </div>
                     </div>
-                    {context.value ? <Button className="sign-in" onClick={logout}>log out</Button> : 
+                    {context.value ? <Button className="btn mainButton sign-in" onClick={logout}>log out</Button> : 
                     <Link to = "sign-in">
-                        <Button className="sign-in">sign in</Button>
+                        <Button className="btn mainButton sign-in">sign in</Button>
                     </Link> 
                     }
                     

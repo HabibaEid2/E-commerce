@@ -8,9 +8,10 @@ import { useEffect } from "react";
 export default function Items() {
     let products = useSelector(state => state.productsData) ; 
     let dispatch = useDispatch() ; 
+    let address = document.location.href.slice(document.location.href.lastIndexOf("/")+1);
+    console.log("address : " , address) ; 
     let count = 0 ; 
     let mainCats = [] ; 
-    let address = document.location.href.slice(document.location.href.lastIndexOf("/")+1);
     let sub_cats = [
         <div className="sub-cat">
             <input type="radio" value="all" id="all" name="sub cat" onClick={() => dispatch(productsInHomeA({ catName : address, subCat : "all"}))}/>
@@ -54,17 +55,14 @@ export default function Items() {
     for(let i of products) {
         count++ ; 
     }
-    function selectCat(e) {
-        console.log(e.target.childNode)
-    }
     return (
         <div className="items">
-            <h1>{address}</h1>
+            <h1 className="mainTitle">{address}</h1>
             <div className="content">
                 <div className="dashboard">
                     {/* categories */}
                     <div className="dash-section categories">
-                        <h2 className="dash-title">Category</h2>
+                        <h2 className="mainTitle dash-title">Category</h2>
                         {mainCats}
                     </div>
 

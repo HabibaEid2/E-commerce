@@ -3,7 +3,6 @@
     background-color: #d1eada;
     margin: 10px;
     border-radius: 18px;
-    font-family: "Caveat", cursive;
 }
 .items .dashboard .dash-section {
     display: block;
@@ -13,7 +12,6 @@
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 .items .dashboard .dash-title {
-    font-family: "Caveat", cursive;
     border-bottom: solid 2px #efefef;
     padding-bottom: 5px;
     margin-bottom: 18px;

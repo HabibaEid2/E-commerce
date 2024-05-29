@@ -8,7 +8,7 @@ export default function NavBar() {
                 <Carousel fade controls = {false}>
                     <Carousel.Item>
                         <Carousel.Caption>
-                        <Newsletter 
+                        <Newsletter className = "mainTitle"
                             title = "Fresh Vegetables Big Discount"
                             p = "Sign Up For The Daily Newsletter"
                             />
