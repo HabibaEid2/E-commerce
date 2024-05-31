@@ -38,3 +38,10 @@ p {
     padding: 4px;
     border-radius: 9px;
 }
+.card button:hover {
+    background-color: var(--main-color);
+    border: var(--main-color);
+    color: white;
+    padding: 4px;
+    border-radius: 9px;
+}

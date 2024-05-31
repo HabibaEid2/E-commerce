@@ -18,7 +18,7 @@ export default function PopularProducs() {
         <div className='popular-products'>
             <Container fluid = "xxl">
                 <div className='categories'>
-                    <div>Pupolar Products : </div>
+                    <h2 className='mainTitle'>Pupolar Products : </h2>
                     <div>{allSubCats}</div>
                 </div>
                 <div className='content'>

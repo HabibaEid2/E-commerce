@@ -4,10 +4,14 @@
     margin: 10px;
     border-radius: 18px;
 }
+.items .dashboard {
+    position: sticky;
+    top: 70px;
+    height: fit-content;
+}
 .items .dashboard .dash-section {
     display: block;
     padding: 20px;
-    margin: 0 0 0 20px;
     border-radius: 4px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
@@ -67,6 +71,7 @@
 /* products */
 .items .products p {
     color: #6f6f6f;
+    margin: 20px 0;
 }
 .items .products span {
     color: var(--main-color);
@@ -76,4 +81,13 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 10px;
+}
+@media (max-width : 567px) {
+    .items .content {
+        grid-template-columns: 1fr;
+    }
+    .items .dashboard {
+        position: relative;
+        top: 0;
+    }
 }

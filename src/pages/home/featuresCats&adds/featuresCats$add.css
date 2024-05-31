@@ -47,3 +47,8 @@
 .add:hover img {
     scale: 1.1;
 }
+@media (max-width : 767px) {
+    .adds {
+        display: none;
+    }
+}

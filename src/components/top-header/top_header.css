@@ -29,39 +29,17 @@ header .smallMenu {
 }
 header .smallMenu span {
     display: block;
-    width: 20px;
-    height: 2px;
-    background-color: black;
-}
-header .searchBar {
-    display: flex;
-    align-items: center;
-    border: solid 1px var(--main-color);
-    position: relative;
-    padding: 0px 40px 0 0;
-    border-radius: 6px;
-}
-header .searchBar::after {
-    content: '\f002';
-    font-family: FontAwesome;
-    position: absolute;
-    top: 8px;
-    right: 10px;
-    color: #9f9f9f;
-}
-header .searchBar input {
-    border: none;
-}
-header .searchBar input:focus {
-    outline: none;
-}
-header #dropdown-basic-button {
-    background-color: transparent;
-    color: black;
-    border: none;
+    width: 29px;
+    height: 4px;
+    border-radius: 95px;
+    background-color: #b0a6a6;
+    border: solid 1px;
 }
 header .userState {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     gap: 19px;
 }
 header .userState div {
@@ -86,12 +64,12 @@ header .userState .userStateNum {
     font-size: 13px;
     border: solid 2px white;
 }
-button.mainButton:hover {
+header .userState .sign-in {
+    background-color: var(--babyGreen-color);
     color: var(--main-color);
-    background-color:var(--babyGreen-color) ;
-    border: solid 1px var(--babyGreen-color);
+    border-color: var(--main-color);
 }
-@media (max-width : 991px) {
+@media (max-width : 567px) {
     header .smallMenu {
         display: flex;
     }

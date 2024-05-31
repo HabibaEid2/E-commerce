@@ -1,4 +1,4 @@
-import { Container } from "react-bootstrap";
+import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import './bottom_header.css'
 import { useDispatch } from "react-redux";
@@ -7,33 +7,19 @@ export default function BottomHeader() {
     let dispatch = useDispatch() ; 
     return (
         <div className="bottom-header">
-            <Container fluid = "xxl">
-                <ul>
-                    <li>
-                        <Link to = "/">Home</Link>
-                    </li>
-                    <li onClick={() => dispatch(productsA({ catName : "groceries", subCat : "all"}))}>
-                        <Link to = "cat/groceries">Grocerires</Link>
-                    </li>
-
-                    <li onClick={() => dispatch(productsA({ catName : "Electronics", subCat : "all"}))}>
-                        <Link to= "cat/Electronics">Electronics</Link>
-                    </li>
-                    <li onClick={() => dispatch(productsA({ catName : "Fashion", subCat : "all"}))}>
-                        <Link to= "cat/Fashion">Fashion</Link>
-                    </li>
-                    <li>
-                        <Link to= "check">Check Signin</Link>
-                    </li>
-                </ul>
-                <div className="call-center">
-                    <img src="https://cdn-icons-png.flaticon.com/512/1283/1283446.png"/>
-                    <div className="callCenter-txt">
-                        <div className="phone">123-456</div>
-                        <p>24/7 Support Center</p>
-                    </div>
-                </div>
-            </Container>
+            <Navbar expand="lg" className="bg-body-tertiary">
+                <Container fluid = "xxl">
+                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                    <Navbar.Collapse id="basic-navbar-nav">
+                    <Nav className="me-auto">
+                    <Link to = "/">Home</Link>
+                    <Link onClick={() => dispatch(productsA({ catName : "groceries", subCat : "all"}))} to = "cat/groceries">Grocerires</Link>
+                    <Link onClick={() => dispatch(productsA({ catName : "Electronics", subCat : "all"}))} to= "cat/Electronics">Electronics</Link>
+                    <Link onClick={() => dispatch(productsA({ catName : "Fashion", subCat : "all"}))} to= "cat/Electronics">Fashion</Link>
+                    </Nav>
+                    </Navbar.Collapse>
+                </Container>
+            </Navbar>
         </div>
     )
 }

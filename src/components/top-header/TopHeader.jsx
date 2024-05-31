@@ -1,5 +1,4 @@
-import { Button, CloseButton, Container , Dropdown ,DropdownButton, Modal} from "react-bootstrap";
-import data from '../../data/data'
+import { Button, CloseButton, Container , Modal} from "react-bootstrap";
 import logo from './../../images/logo.svg'
 import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
@@ -15,20 +14,13 @@ export default function Top_Header() {
     let context = useContext(logged) ;
     let cart_products = useSelector(state => state.cartList) ; 
     let favList = useSelector(state => state.favList) ; 
-    let headerMenu = [] ; 
-    
-    for(let i of data.productData) {
-        for(let j of i.items) {
-            headerMenu.push(<Dropdown.Item key={i.items.indexOf(j)} href="https://google.com">{j.cat_name} </Dropdown.Item>)
-        }
-    }
     useEffect(() => {
         if (cookie.get("token")) context.setValue(true) ;
-        if (window.innerWidth >= 992) setMenuDisplay("flex")
+        if (window.innerWidth >= 568) setMenuDisplay("flex")
         else setMenuDisplay("none")
     } , [])
     window.onresize = function() {
-        if (window.innerWidth >= 992) setMenuDisplay("flex")
+        if (window.innerWidth >= 568) setMenuDisplay("flex")
         else setMenuDisplay("none")
     }
     function clickMenu() {
@@ -44,7 +36,9 @@ export default function Top_Header() {
     return(
         <header>
             <Container fluid = "xxl">
-                <img src={logo} alt="logo"/>
+                <Link to={'./'}>
+                    <img src={logo} alt="logo"/>
+                </Link>
                 <div className="smallMenu" onClick={clickMenu}>
                     <span></span>
                     <span></span>
@@ -52,14 +46,8 @@ export default function Top_Header() {
                 </div>
                 <div className="content" style={{display : menuDisplay}}>
                     <CloseButton onClick={removeMenu}/>
-                    <div className="searchBar">
-                        <DropdownButton id="dropdown-basic-button" title = "categories">
-                            {headerMenu}
-                        </DropdownButton>
-                        <input type = "search" placeholder="search for items..." className="topNavSearch"/>
-                    </div>
                     <div className="userState">
-                        <div className="wishList">
+                        <div className="favList">
                             <Button className = "btn mainButton" onClick={() => setShowFav(true)}>
                                 <div className="userStateNum">{favList.length}</div>
                                 <i className="fa-solid fa-heart"></i> Favorite
@@ -82,7 +70,7 @@ export default function Top_Header() {
                             </Modal>
                         </div>
 
-                        <div className="cartList">
+                        <div className="cartList-parent">
                             <Button className = "btn mainButton" onClick={() => setShowCart(true)}>
                                 <div className="userStateNum">{cart_products.length}</div>
                                 <i className="fa-solid fa-cart-shopping"></i> Cart
@@ -106,12 +94,13 @@ export default function Top_Header() {
                                 </Modal.Footer>
                             </Modal>
                         </div>
-                    </div>
-                    {context.value ? <Button className="btn mainButton sign-in" onClick={logout}>log out</Button> : 
-                    <Link to = "sign-in">
-                        <Button className="btn mainButton sign-in">sign in</Button>
-                    </Link> 
+
+                        {context.value ? <Button className="btn mainButton sign-in" onClick={logout}>log out</Button> : 
+                        <Link to = "sign-in">
+                            <Button className="btn sign-in">sign in</Button>
+                        </Link> 
                     }
+                    </div>
                     
                 </div>
             </Container>

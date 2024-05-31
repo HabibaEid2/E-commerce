@@ -1,5 +1,5 @@
 import { Container } from "react-bootstrap";
-import data from './../../../data/data'
+import data from './../../../data/data';
 import add1Img from './../../../images/hom-add-1.jpeg'
 import add2Img from './../../../images/hom-add-2.jpeg'
 import add3Img from './../../../images/hom-add-3.jpeg'

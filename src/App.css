@@ -74,3 +74,8 @@ button.mainButton {
     background-color: var(--main-color);
     border-color: var(--main-color);
 }
+button.mainButton:hover {
+    color: var(--main-color);
+    background-color:var(--babyGreen-color) ;
+    border: solid 1px var(--babyGreen-color);
+}
