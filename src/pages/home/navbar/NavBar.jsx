@@ -18,6 +18,7 @@ export default function NavBar() {
                         <Carousel.Caption>
                             <Newsletter
                             title = "Don't miss amazing grocery deals"
+                            p = "Sign Up For The Daily Newsletter"
                             />
                         </Carousel.Caption>
                     </Carousel.Item>

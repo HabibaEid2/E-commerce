@@ -7,7 +7,7 @@ export default function NewsLetterFooter() {
             <div className="newsLetterFooter">
                 <Newsletter 
                 title = "Stay home & get your daily needs from our shop"
-                />
+                p = "Start You'r Daily Shopping with Nest Mart"/>
             </div>
         </Container>
         
