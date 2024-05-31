@@ -1,5 +1,6 @@
 .featuresCats h3 {
     margin: 40px 0;
+    font-family: "Caveat" , cursive;
 }
 .featuresCats .categories {
     display: flex;

@@ -9,7 +9,7 @@
 }
 .navBar .carousel .carousel-item {
     background-size: cover;
-    min-height: 70vh;
+    min-height: 60vh;
     display: flex;
     align-items: center;
     border-radius: 14px;
