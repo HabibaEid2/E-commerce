@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/E-commerce/static/css/main.f63a5d60.css",
+    "main.js": "/E-commerce/static/js/main.dc18ac64.js",
+    "static/media/navBar2-commerce.png": "/E-commerce/static/media/navBar2-commerce.89d4c10e6549245f337a.png",
+    "static/media/navBar-commerce.png": "/E-commerce/static/media/navBar-commerce.01fdcc91eff86c9fabdc.png",
+    "static/media/fa-solid-900.ttf": "/E-commerce/static/media/fa-solid-900.45a265d0f07b31cde85f.ttf",
+    "static/media/fa-brands-400.ttf": "/E-commerce/static/media/fa-brands-400.6205fd00fb1b573e9f0f.ttf",
+    "static/media/fa-solid-900.woff2": "/E-commerce/static/media/fa-solid-900.fb8184add5a3101ad0a3.woff2",
+    "static/media/fa-brands-400.woff2": "/E-commerce/static/media/fa-brands-400.8d3cabfc66809162fb4d.woff2",
+    "static/media/navBar3.png": "/E-commerce/static/media/navBar3.408dd67727d7405d04a0.png",
+    "static/media/fa-regular-400.ttf": "/E-commerce/static/media/fa-regular-400.adc51aab4d771ab65f81.ttf",
+    "static/media/home-element.jpg": "/E-commerce/static/media/home-element.030ea6a82a502a527bf2.jpg",
+    "static/media/navBar3bg.png": "/E-commerce/static/media/navBar3bg.56479838083707e4ffd6.png",
+    "static/media/fa-regular-400.woff2": "/E-commerce/static/media/fa-regular-400.e931bc0d14f5bbb1da22.woff2",
+    "static/media/loading.gif": "/E-commerce/static/media/loading.6e1d23c8f091c90f596a.gif",
+    "static/media/logo.svg": "/E-commerce/static/media/logo.f6bfe63d8c5c4a6d9b6d461c6aa5d94c.svg",
+    "static/media/daily-sells-add.jpg": "/E-commerce/static/media/daily-sells-add.51364679caba6731ed07.jpg",
+    "static/media/hom-add-3.jpeg": "/E-commerce/static/media/hom-add-3.0dda0c16773d3cb2484d.jpeg",
+    "static/media/fa-v4compatibility.ttf": "/E-commerce/static/media/fa-v4compatibility.2eb7b3ef25042305f3ff.ttf",
+    "static/media/fa-v4compatibility.woff2": "/E-commerce/static/media/fa-v4compatibility.b3049b13a93f07e026fc.woff2",
+    "index.html": "/E-commerce/index.html",
+    "main.f63a5d60.css.map": "/E-commerce/static/css/main.f63a5d60.css.map",
+    "main.dc18ac64.js.map": "/E-commerce/static/js/main.dc18ac64.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f63a5d60.css",
+    "static/js/main.dc18ac64.js"
+  ]
+}
