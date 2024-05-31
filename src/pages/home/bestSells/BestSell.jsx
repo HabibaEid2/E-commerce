@@ -16,11 +16,6 @@ export default function BestSells() {
         if (e.target.scrollLeft !== 0) {
             setLeftDisplay("block")
             setRightDisplay("block")
-            console.log(
-                `the count : ${Math.round(e.target.scrollLeft + e.target.offsetWidth)}
-                scrollWidth : ${e.target.scrollWidth}
-                `
-            )
             if (Math.round(e.target.scrollLeft + e.target.offsetWidth) >= e.target.scrollWidth) {
                 setRightDisplay("none")
             }                

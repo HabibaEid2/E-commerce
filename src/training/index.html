@@ -4,18 +4,25 @@
   <link rel="stylesheet" href="./index.css">
 </head>
 <body>
-  
-  <div class="parent">
-    <img src="https://images.pexels.com/photos/23719481/pexels-photo-23719481/free-photo-of-chrysanthemum-flower.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="">
+  <h1>choose language : </h1>
+
+  <div>
+    <input type="radio" name = "lang" value="html" id="html" onclick="check()">
+    <label for="html">HTML</label>
   </div>
 
-  <div class="range">
-    <input type="range" min = "10" max = "50">
+  <div>
+    <input type="radio" name = "lang" value="css" id="css" onclick="check()">
+    <label for="css">CSS</label>
+  </div>
+
+  <div>
+    <input type="radio" name = "lang" value="js" id="js" onclick="check()">
+    <label for="js">JS</label>
   </div>
   <script>
-    let range = document.querySelector(".range input") ; 
-    range.onchange = (e) => {
-      console.log(e.target.value)
+    function check() {
+      console.log(document.querySelector("input[name = 'lang']:checked").value ) ; 
     }
   </script>
 </body>

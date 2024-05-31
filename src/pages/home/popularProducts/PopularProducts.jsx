@@ -2,7 +2,7 @@ import { Container} from 'react-bootstrap'
 import './popularProducts.css'
 import { useDispatch, useSelector } from 'react-redux';
 import data from '../../../data/data';
-import { productsInHomeA } from '../../../redux/reducer';
+import { productsA } from '../../../redux/reducer';
 export default function PopularProducs() {
     let dispatch = useDispatch() ;  
     let products = useSelector(state => state.productsData) ;
@@ -10,7 +10,7 @@ export default function PopularProducs() {
     for(let i of data.productData) {
         for(let j of i.items) {
             allSubCats.push(
-                <button onClick={() => dispatch(productsInHomeA({catName : i.cat_name , subCat : j.cat_name}))}>{j.cat_name}</button >
+                <button onClick={() => dispatch(productsA({catName : i.cat_name , subCat : j.cat_name}))}>{j.cat_name}</button >
             ) ; 
         }
     }

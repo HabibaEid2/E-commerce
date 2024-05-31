@@ -4,6 +4,7 @@ import add1Img from './../../../images/hom-add-1.jpeg'
 import add2Img from './../../../images/hom-add-2.jpeg'
 import add3Img from './../../../images/hom-add-3.jpeg'
 import './featuresCats$add.css' ; 
+import { Link } from "react-router-dom";
 export default function FeaturesCats$Adds() {
     let groceriesNum = 0 ; 
     let eleNums = 0 ; 
@@ -16,11 +17,13 @@ export default function FeaturesCats$Adds() {
             else fashionNums += j.products.length ; 
         }
         featursArr.push(
-            <div key={data.productData.indexOf(i)} className="category" style={{backgroundColor : (i.cat_name == "groceries") ? "#fffceb" : i.cat_name == "Electronics" ? "rgb(236, 255, 236)" : "rgb(254, 239, 234)"}}>
-                <img src={i.image}/>
-                <div className="cat-title">{i.cat_name}</div>
-                <div className="productsNum">{(i.cat_name == "groceries") ? groceriesNum : i.cat_name == "Electronics" ? eleNums : fashionNums}</div>
-            </div>
+            <Link to = {`/cat/${i.cat_name}`}>
+                <div key={data.productData.indexOf(i)} className="category" style={{backgroundColor : (i.cat_name == "groceries") ? "#fffceb" : i.cat_name == "Electronics" ? "rgb(236, 255, 236)" : "rgb(254, 239, 234)"}}>
+                    <img src={i.image}/>
+                    <div className="cat-title">{i.cat_name}</div>
+                    <div className="productsNum">{(i.cat_name == "groceries") ? groceriesNum : i.cat_name == "Electronics" ? eleNums : fashionNums}</div>
+                </div>
+            </Link>
         )
     }
     return (

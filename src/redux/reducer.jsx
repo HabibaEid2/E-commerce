@@ -6,49 +6,32 @@ export const productsData = createSlice({
     name : [] , 
     initialState : dalsApulses, 
     reducers : {
-        productsInHomeA : (state , action) => {
+        productsA : (state , action) => {
             let index = data.productData.findIndex(ele => ele.cat_name === action.payload.catName) ; 
             let subCat = action.payload.subCat ; 
             state = [] ; 
-            for(let i of data.productData[index].items) {
-                if(i.cat_name === subCat || subCat === "all") {
-                    for(let j of i.products) {
-                        state.push(
-                        <ProductCard key = {j.id} description = {j.description}
-                            productName = {j.productName}
-                            id = {j.id}
-                            catImg = {j.catImg}  
-                            title = {`${j.productName.slice(0,30)}...`}
-                            rating = {j.rating}
-                            brand = {j.brand}
-                            price = {j.price}
-                            oldPrice = {j.oldPrice}
-                            />)
+            if (index >= 0) {
+                for(let i of data.productData[index].items) {
+                    if(i.cat_name === subCat || subCat === "all") {
+                        for(let j of i.products) {
+                            state.push(
+                            <ProductCard key = {j.id} description = {j.description}
+                                productName = {j.productName}
+                                id = {j.id}
+                                catImg = {j.catImg}  
+                                title = {`${j.productName.slice(0,30)}...`}
+                                rating = {j.rating}
+                                brand = {j.brand}
+                                price = {j.price}
+                                oldPrice = {j.oldPrice}
+                                />)
+                            }
                         }
-                    }
-            }
-            return state ; 
-        } , 
-        mainCatsA : (state , action) => {
-            state = [] ; 
-            let index = data.productData.findIndex(ele => ele.cat_name === action.payload.type) ; 
-            for(let i of data.productData[index].items) {
-                for(let j of i.products) {
-                    state.push(
-                        <ProductCard key = {j.id} description = {j.description}
-                            productName = {j.productName}
-                            id = {j.id}
-                            catImg = {j.catImg}  
-                            title = {`${j.productName.slice(0,30)}...`}
-                            rating = {j.rating}
-                            brand = {j.brand}
-                            price = {j.price}
-                            oldPrice = {j.oldPrice}
-                    />) ; 
                 }
             }
+            
             return state ; 
-        }
+        } 
     } 
 })
 
@@ -93,7 +76,7 @@ export const favList = createSlice({
         }
     }
 })
-export let {productsInHomeA , mainCatsA} = productsData.actions ; 
+export let {productsA} = productsData.actions ; 
 export let {bestSellsF} = bestSells.actions ;
 export let {addToCartA , removeFromCartA} = cartList.actions ; 
 export let {addToFavListA , removeFromFavListA} = favList.actions ; 

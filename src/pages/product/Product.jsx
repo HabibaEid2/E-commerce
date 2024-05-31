@@ -17,6 +17,7 @@ export default function Product() {
     let indexInCart = list.findIndex((ele) => ele.props.id === location) ; 
     let indexInFav = favList.findIndex((ele) => ele.props.id === location) ; 
     let weight = [] ; 
+    let weightSection ; 
     useEffect(() => {
         for(let i of data.productData) {
             for(let j of i.items) {
@@ -41,6 +42,12 @@ export default function Product() {
             key = {productObj.weight.indexOf(i)}
             >{i}g</Button>)
         } ; 
+        if (weight.length > 1) {
+            weightSection = <div className="size">
+                <p>Size / Weight:</p>
+                <div>{weight}</div>
+            </div>
+        }
     }
     function handleActive(e) {
         setActive(e.target.id) ; 
@@ -102,11 +109,8 @@ export default function Product() {
                         </div>
                     </div>
                     <div className="description p-color">{productObj.description}</div>
-                    <div className="size">
-                        <p>Size / Weight:</p>
-                        <div>{weight}</div>
-                    </div>
-                    <div className="addition">
+                    {weightSection}
+                    <div className="addition" style={{marginTop : "20px"}}>
                         {indexInCart !== -1 ? 
                         <Button className = "btn mainButton" onClick={handleRemoveFromCart}><i className="fa-solid fa-circle-check"></i> Added</Button>: 
                         <Button className = "btn mainButton" onClick={handleAdditionToC}><i className="fa-solid fa-cart-shopping"></i> Add to cart</Button>

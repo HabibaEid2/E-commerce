@@ -33,7 +33,8 @@ for(let i of data.productData) {
                     brand = {r.brand}
                     price = {r.price}
                     oldPrice = {r.oldPrice}
-                    id = {j.products.indexOf(r)+" " + i.items.indexOf(j)}
+                    // id = {j.products.indexOf(r)+" " + i.items.indexOf(j)}
+                    id = {r.id}
                     />)
             }
             
