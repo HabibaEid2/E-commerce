@@ -52,7 +52,7 @@
     color: var(--main-color);
     border-color: var(--babyGreen-color);
 }
-@media (max-width : 768px) {
+@media (max-width : 991px) {
     .productData .container-xxl {
         grid-template-columns: 1fr;
     }

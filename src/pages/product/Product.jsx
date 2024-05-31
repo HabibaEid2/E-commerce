@@ -6,7 +6,16 @@ import CartProduct from '../../components/cartProduct/Cart_Fav_Product';
 import Rate from '../../components/rate/Rate';
 import { useDispatch, useSelector} from 'react-redux';
 import { addToCartA, addToFavListA, removeFromCartA, removeFromFavListA } from '../../redux/reducer';
+
 export default function Product() {
+    useEffect(() => {
+        window.scrollTo({
+            top : 0 , 
+            left : 0 , 
+            behavior : "instant"
+        }) ; 
+    } , [])
+    
     let location = +window.location.href.slice(window.location.href.lastIndexOf('/') + 1) ; 
     let [productObj , setProductObj] = useState({}) ; 
     let [active , setActive] = useState(0) ; 

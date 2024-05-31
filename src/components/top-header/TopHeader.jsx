@@ -30,7 +30,7 @@ export default function Top_Header() {
         setMenuDisplay("none")
     }
     function logout() {
-        cookie.remove("token")
+        cookie.remove("token") ; 
         context.setValue(false)
     }
     return(
@@ -63,7 +63,9 @@ export default function Top_Header() {
                                     Favoriate List 
                                     </Modal.Title>
                                 </Modal.Header>
-                                <Modal.Body>{favList}</Modal.Body>
+                                <Modal.Body>
+                                    <div className="list">{favList}</div>
+                                </Modal.Body>
                                 <Modal.Footer>
                                     <Button class = "btn mainButton" onClick={() => setShowFav(false)}>Close</Button>
                                 </Modal.Footer>
@@ -87,10 +89,10 @@ export default function Top_Header() {
                                     </Modal.Title>
                                 </Modal.Header>
                                 <Modal.Body>
-                                    <div className="cartList">{cart_products}</div>
+                                    <div className="list">{cart_products}</div>
                                 </Modal.Body>
                                 <Modal.Footer>
-                                    <Button onClick={() => setShowCart(false)}>Close</Button>
+                                    <Button variant="warning" onClick={() => setShowCart(false)}>Close</Button>
                                 </Modal.Footer>
                             </Modal>
                         </div>

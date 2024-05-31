@@ -18,18 +18,23 @@
     font-size: 20px;
     font-weight: bold;
 }
-.popular-products button:active {
-    color: white;
-}
-.categories {
+.popular-products .categories {
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
 }
-.categories div {
+.popular-products .categories div {
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
+}
+.popular-products .categories button {
+    border: none;
+    background: white;
+    color: #757474;
+}
+.popular-products .categories button:hover {
+    color: var(--main-color);
 }
 @media (max-width : 549px) {
     .popular-products .content {

@@ -1,8 +1,17 @@
+.modal-content {
+    max-width: 600px;
+    margin: auto;
+}
+.modal-body {
+    max-height: 60vh;
+    overflow: auto;
+}
 .modal-body .card {
     flex-direction: row;
     width: 100% !important;
     align-items: center;
     position: relative;
+    margin: 15px 0;
 }
 .modal-body .card img {
     width : 200px ; 

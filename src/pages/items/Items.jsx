@@ -7,6 +7,14 @@ import { useEffect, useRef } from "react";
 import { Container } from "react-bootstrap";
 
 export default function Items() {
+    useEffect(() => {
+        window.scrollTo({
+            top : 0 , 
+            left : 0 , 
+            behavior : "instant"
+        }) ; 
+    } ,[])
+
     let products = useSelector(state => state.productsData) ; 
     let dispatch = useDispatch() ; 
     let inputRadio = useRef() ; 

@@ -1,5 +1,5 @@
 import './register.css'
-import { useContext, useEffect, useState } from "react"
+import { useContext, useState } from "react"
 import { Alert, Spinner } from "react-bootstrap";
 import google from './../../images/google-img.png'
 import { Link, useNavigate } from "react-router-dom";
@@ -13,7 +13,6 @@ export default function Register(props) {
     let [password , setPassword] = useState("") ;
     let [confirm_pass , setConfirm_pass] = useState("") ; 
     let [email , setEmail] = useState("") ; 
-    let [user , setUser] = useState([]) ; 
     let [load, setLoad] = useState(false) ; 
     let [visionP , setVisionP] = useState(false) ; 
     let [visionCP , setVisionCP] = useState(false) ; 
