@@ -27,9 +27,9 @@ function App() {
         <BottomHeader/>
           <Routes>
             <Route path='*' element = {<Home/>}/>
-            <Route path='/E-commerce/' element = {<Home/>}/>
-            <Route path='/products/:id' element = {<Product/>}/>
-            <Route path='/cat/*' element = {<Items/>}/>
+            {/* <Route path='/E-commerce/' element = {<Home/>}/> */}
+            <Route path='products/:id' element = {<Product/>}/>
+            <Route path='cat/*' element = {<Items/>}/>
             <Route path='sign-in' element = {<SignIn/>}/>
             <Route path='sign-up' element = {<SignUp/>}/>
           </Routes>
