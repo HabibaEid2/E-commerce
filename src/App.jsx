@@ -26,7 +26,7 @@ function App() {
         <Top_Header/>
         <BottomHeader/>
           <Routes>
-            <Route path='*' element = {<Home/>}/>
+            <Route path='/*' element = {<Home/>}/>
             {/* <Route path='/E-commerce/' element = {<Home/>}/> */}
             <Route path='products/:id' element = {<Product/>}/>
             <Route path='cat/*' element = {<Items/>}/>
