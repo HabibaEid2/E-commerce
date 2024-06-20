@@ -24,6 +24,7 @@ export const productsData = createSlice({
                                 brand = {j.brand}
                                 price = {j.price}
                                 oldPrice = {j.oldPrice}
+                                size = {j.weight[0]}
                                 />)
                             }
                         }

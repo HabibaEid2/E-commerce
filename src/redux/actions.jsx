@@ -14,6 +14,7 @@ for(let i of data.productData[0].items) {
                 brand = {j.brand}
                 price = {j.price}
                 oldPrice = {j.oldPrice}
+                size = {j.weight[0]}
                 />)
             }
         }
@@ -33,8 +34,8 @@ for(let i of data.productData) {
                     brand = {r.brand}
                     price = {r.price}
                     oldPrice = {r.oldPrice}
-                    // id = {j.products.indexOf(r)+" " + i.items.indexOf(j)}
                     id = {r.id}
+                    size = {r.SIZE}
                     />)
             }
             

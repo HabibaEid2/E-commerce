@@ -10,7 +10,7 @@ export default function ProductCard(props) {
     let cartList = useSelector(state => state.cartList) ; 
     let index = cartList.findIndex((ele) => ele.props.id === props.id) ; 
     let dispatch = useDispatch() ; 
-    function addToCart(e) {
+    function addToCart() {
         dispatch(addToCartA(
             <CartProduct
             key = {props.id} 
@@ -21,7 +21,8 @@ export default function ProductCard(props) {
             rating = {props.rating}
             price = {props.price}
             oldPrice = {props.oldPrice}
-            place = "cart"
+            place = "cart" 
+            size = {props.size}
             />)) ; 
     }
     function removeFromCart () {
