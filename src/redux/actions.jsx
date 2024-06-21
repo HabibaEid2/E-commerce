@@ -35,7 +35,6 @@ for(let i of data.productData) {
                     price = {r.price}
                     oldPrice = {r.oldPrice}
                     id = {r.id}
-                    size = {r.SIZE}
                     />)
             }
             

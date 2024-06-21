@@ -7,6 +7,25 @@ html {
     --p-color : #7e7e7e;
     --font-color : #1c1a1aba ; 
 }
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background-color: rgb(227, 227, 227);
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgb(226, 165, 11);
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
 * {
     padding: 0;
     margin: 0;
