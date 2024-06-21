@@ -44,7 +44,7 @@ export default function CartProduct(props) {
                 <Card.Text>{`${props.description.slice(props.title.length , 100)}`}</Card.Text>
                 <Rate rate = {+props.rating}/>
                 <div className="size">
-                    size : {props.size}
+                    {props.size != undefined && `size : ${props.size}`}
                 </div>
                 <div className="price">
                     <div className="newPrice">Rs{props.price}</div>

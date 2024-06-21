@@ -26,11 +26,11 @@ export const productsData = createSlice({
                                 oldPrice = {j.oldPrice}
                                 size = {j.weight[0]}
                                 />)
-                            }
                         }
+                    }
                 }
             }
-            
+            console.log(action.payload.catName)
             return state ; 
         } 
     } 
