@@ -6,6 +6,23 @@
     max-height: 60vh;
     overflow: auto;
 }
+.modal-content .modal-footer button {
+    padding: 0;
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.modal-content .modal-footer button:active {
+    background-color: white;
+}
+.modal-content .modal-footer i {
+    color: red;
+    font-size: 29px;
+}
 .modal-body .card {
     flex-direction: row;
     width: 100% !important;
@@ -36,6 +53,12 @@
 }
 .modal-body .card button i {
     margin-right: 10px;
+}
+.modal-footer {
+    position: absolute;
+    top: -27px;
+    right: -21px;
+    border: none;
 }
 @media (max-width : 500px) {
     .modal-body .card {

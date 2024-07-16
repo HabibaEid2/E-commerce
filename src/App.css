@@ -6,6 +6,7 @@ html {
     --babyGreen-color : #def9ec ; 
     --p-color : #7e7e7e;
     --font-color : #1c1a1aba ; 
+    --transition : .3s ; 
 }
 ::-webkit-scrollbar {
     width: 10px;
@@ -29,6 +30,7 @@ html {
 * {
     padding: 0;
     margin: 0;
+    font-size: 15px;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -46,9 +48,6 @@ a {
 }
 .p-color {
     color: var(--p-color);
-}
-.mainTitle {
-    font-family: "Caveat", cursive;
 }
 .price {
     display: flex;
@@ -83,11 +82,11 @@ a {
     margin: 0;
     font-size: 11px;
 }
-[class *= btn].btn:active {
+/* [class *= btn].btn:active {
     background-color: var(--babyGreen-color);
     color: var(--main-color);
     border-color: var(--babyGreen-color);
-}
+} */
 button.mainButton {
     color: white;
     background-color: var(--main-color);

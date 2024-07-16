@@ -1,4 +1,4 @@
-import FeaturesCats$Adds from "./featuresCats&adds/FeaturesCats$Adds";
+import FeaturesCats from "./featuresCats/FeaturesCats";
 import NavBar from "./navbar/NavBar";
 import PopularProducts from "./popularProducts/PopularProducts";
 import HomeSectoins from "./homeSections/HomeSections";
@@ -16,7 +16,7 @@ export default function Home() {
     return(
         <>
         <NavBar/>
-        <FeaturesCats$Adds/>
+        <FeaturesCats/>
         <PopularProducts/>
         <BestSells/>
         <HomeSectoins/>

@@ -27,34 +27,8 @@
 }
 .newsLetterSection h3{
     color: var(--font-color);
-    font-size: 6.5vw;
+    font-size: 6vw;
     padding: 20px;
-    font-size: bold;
-}
-.newsLetterSection .subscribe-input {
-    border-radius: 27px;
-    border: none;
-    background-color: white;
-    width: fit-content;
-}
-.newsLetterSection .subscribe input {
-    border: none;
-    outline: none;
-}
-.newsLetterSection .subscribe button {
-    border: var(--main-color);
-    background-color: var(--main-color);
-    color: white;
-    padding: 15px;
-    border-radius: 27px;
-}
-.newsLetterSection .subscribe  p {
-    padding: 14px;
-}
-.newsLetterSection .subscribe i {
-    color: var(--font-color);
-    padding: 15px 10px 15px 22px;
-    font-size: 16px;
 }
 .navBar .carousel .carousel-caption a {
     background-color: var(--main-color);
@@ -68,4 +42,29 @@
     height: 10px;
     border: solid 1px black;
     border-radius: 50%;
+}
+.newsLetterSection form {
+    background-color: white;
+    width: fit-content;
+    border-radius: 27px;
+    padding-left: 15px;
+    margin: 15px 30px;
+}
+.newsLetterSection form img {
+    width: 24px;
+    margin-right: 12px;
+}
+.newsLetterSection input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 15px 0;
+}
+.newsLetterSection form button {
+    background-color: var(--main-color);
+    border: none;
+    outline: none;
+    color: white;
+    padding: 15px;
+    border-radius: 29px;
 }

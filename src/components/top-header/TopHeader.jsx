@@ -45,7 +45,7 @@ export default function Top_Header() {
                     <span></span>
                 </div>
                 <div className="content" style={{display : menuDisplay}}>
-                    <CloseButton onClick={removeMenu}/>
+                    <CloseButton onClick={removeMenu} variant={"coool"}/>
                     <div className="userState">
                         <div className="favList">
                             <Button className = "btn mainButton" onClick={() => setShowFav(true)}>
@@ -67,7 +67,9 @@ export default function Top_Header() {
                                     <div className="list">{favList}</div>
                                 </Modal.Body>
                                 <Modal.Footer>
-                                    <Button class = "btn mainButton" onClick={() => setShowFav(false)}>Close</Button>
+                                    <Button onClick={() => setShowFav(false)}>
+                                        <i class="fa-solid fa-circle-xmark"></i>
+                                    </Button>
                                 </Modal.Footer>
                             </Modal>
                         </div>
@@ -92,7 +94,9 @@ export default function Top_Header() {
                                     <div className="list">{cart_products}</div>
                                 </Modal.Body>
                                 <Modal.Footer>
-                                    <Button variant="warning" onClick={() => setShowCart(false)}>Close</Button>
+                                    <Button onClick={() => setShowCart(false)}>
+                                        <i class="fa-solid fa-circle-xmark"></i>
+                                    </Button>
                                 </Modal.Footer>
                             </Modal>
                         </div>

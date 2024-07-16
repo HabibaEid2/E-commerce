@@ -30,7 +30,6 @@ export const productsData = createSlice({
                     }
                 }
             }
-            console.log(action.payload.catName)
             return state ; 
         } 
     } 

@@ -8,7 +8,7 @@ p {
     height: fit-content;
 }
 .card:hover {
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+    box-shadow: 6px 6px 0px 0 #eee5bbb5 ; 
 }
 .card img {
     height: 200px;
@@ -37,6 +37,9 @@ p {
     color: var(--main-color);
     padding: 4px;
     border-radius: 9px;
+}
+.card button:active{
+    background-color: var(--babyGreen-color) !important;
 }
 .card button:hover {
     background-color: var(--main-color);

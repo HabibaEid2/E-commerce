@@ -1,6 +1,5 @@
 .featuresCats h3 {
     margin: 40px 0;
-    font-family: "Caveat" , cursive;
 }
 .featuresCats .categories {
     display: flex;
@@ -27,29 +26,4 @@
 .featuresCats .cat-title {
     font-weight: bold;
     font-size: 13px;
-}
-
-.adds {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 0;
-}
-.adds .add {
-    border-radius:10px ;
-    overflow: hidden;
-}
-.adds img {
-    width: 100%;
-    border-radius: 10px;
-    transition: .3s;
-}
-.add:hover img {
-    scale: 1.1;
-}
-@media (max-width : 767px) {
-    .adds {
-        display: none;
-    }
 }

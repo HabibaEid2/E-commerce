@@ -39,7 +39,6 @@ export default function Register(props) {
                     password : password , 
                     password_confirmation : confirm_pass ,
                 }).then((res) => {
-                    console.log(res) ; 
                     setLoad(false) ; 
                     setError(false) ; 
                     cookie.set("token" , res.data.data.token)
@@ -58,7 +57,6 @@ export default function Register(props) {
                     email : email , 
                     password : password , 
                 }).then((res) => {
-                    console.log(res) ; 
                     setLoad(false) ; 
                     setError(false) ; 
                     cookie.set("token" , res.data.data.token)

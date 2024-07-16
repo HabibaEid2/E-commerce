@@ -1,9 +1,9 @@
 import { Container } from "react-bootstrap";
-import data from './../../../data/data';
+import data from '../../../data/data';
 import add1Img from './../../../images/hom-add-1.jpeg'
 import add2Img from './../../../images/hom-add-2.jpeg'
 import add3Img from './../../../images/hom-add-3.jpeg'
-import './featuresCats$add.css' ; 
+import './featuresCats.css' ; 
 import { Link } from "react-router-dom";
 export default function FeaturesCats$Adds() {
     let groceriesNum = 0 ; 
@@ -32,17 +32,6 @@ export default function FeaturesCats$Adds() {
                 <h3>Featurse Categories</h3>
                 <div className="categories">
                     {featursArr}
-                </div>
-            </div>
-            <div className="adds">
-                <div className="add">
-                    <img src={add1Img}/>
-                </div>
-                <div className="add">
-                    <img src={add2Img}/>
-                </div>
-                <div className="add">
-                    <img src={add3Img}/>
                 </div>
             </div>
         </Container>

@@ -1,5 +1,5 @@
 {
-  "homepage": "https://habibaeid2.github.io/E-commerce" , 
+  "homepage": "https://habibaeid2.github.io/E-commerce",
   "name": "e-commerce",
   "version": "0.1.0",
   "private": true,
@@ -16,6 +16,7 @@
     "react": "^18.2.0",
     "react-bootstrap": "^2.10.2",
     "react-dom": "^18.2.0",
+    "react-icons": "^5.2.1",
     "react-redux": "^9.1.1",
     "react-router-dom": "^6.22.3",
     "react-scripts": "5.0.1",
@@ -29,8 +30,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject" , 
-    "predeploy": "npm run build" , 
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {

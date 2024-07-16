@@ -73,19 +73,19 @@ export default function Items() {
     return (
         <div className="items">
             <Container fluid = "xxl">
-                <h1 className="mainTitle">{address}</h1>
+                <h1>{address}</h1>
                 <div className="content">
                     <div className="dashboard">
                         {/* categories */}
                         <div className="dash-section categories">
-                            <h2 className="mainTitle dash-title">Category</h2>
+                            <h2 className="dash-title">Category</h2>
                             {mainCats}
                         </div>
 
                         {/* fill by price */}
                         <div className="dash-section fillByPrice">
                             <div className="filterCats">
-                                <h3 className="mainTitle dash-title">Filter By Sub Categories</h3>
+                                <h3 className="dash-title">Filter By Sub Categories</h3>
                                 <div className="sub-cats" ref={inputRadio}>{sub_cats} </div>
                                 <div className="image">
                                 </div>
