@@ -4,39 +4,47 @@ import './cartProduct.css'
 import Rate from "../rate/Rate";
 import { useDispatch, useSelector } from "react-redux";
 import { removeFromCartA, removeFromFavListA } from "../../redux/reducer";
-import { useState } from "react";
 export default function CartProduct(props) {
-    let [id , setID] = useState("") ; 
     let cartList = useSelector(state => state.cartList) ;
     let favList = useSelector(state => state.favList) ; 
     let dispatch = useDispatch() ;
-    let indexInCart ; 
-    let indexInFav ; 
-    for(let i = 0 ; i< cartList.length ;i++) {
-        if(cartList[i].props.id === id) {
-            indexInCart = i ; 
+
+    let id ; 
+    let indexInCart = null ; 
+    let indexInFav = null; 
+
+    // remove item from cart list
+    function handleRemoveItemC(id) {
+        for(let i = 0 ; i< cartList.length ;i++) {
+            if(cartList[i].props.id === +id) {
+                indexInCart = i ; 
+            }
         }
-    }
-    for(let i = 0 ; i< favList.length ;i++) {
-        if(favList[i].props.id === id) {
-            indexInFav = i ; 
-        }
-    }
-    function handleRemoveItemC() {
         dispatch(removeFromCartA(indexInCart)) ; 
     }
-    function handleRemoveItemF() {
+
+    // remove item from favorite list
+    function handleRemoveItemF(id) {
+        for(let i = 0 ; i< favList.length ;i++) {
+            if(favList[i].props.id === +id) {
+                indexInFav = i ; 
+            }
+        }
         dispatch(removeFromFavListA(indexInFav)) ; 
     }
+
+    // check place of item (cart or fav)
     function getPlace(e) {
-        if (props.place === "cart") handleRemoveItemC()
-        else  handleRemoveItemF() ;
-        setID(e.target.parentElement.parentElement.parentElement.id) ; 
-        
+        id = e.target.parentElement.parentElement.parentElement.id ; 
+        if (props.place === "cart") handleRemoveItemC(id)
+        else handleRemoveItemF(id) ; 
     }
+    
     return (
         <Card title={props.description} id={props.id}>
-            <Card.Img variant="top" src={props.img} />
+            <div>
+                <Card.Img variant="top" src={props.img} />
+            </div>
             <Card.Body>
                 <Card.Title>
                     <Link to={`products/${props.id}`}>{props.title}</Link>

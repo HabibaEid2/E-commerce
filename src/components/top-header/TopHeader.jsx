@@ -10,15 +10,18 @@ export default function Top_Header() {
     let [menuDisplay , setMenuDisplay] = useState("none") ; 
     let [showFav, setShowFav] = useState(false);
     let [showCart, setShowCart] = useState(false);
+
     let cookie = new Cookies() ; 
     let context = useContext(logged) ;
     let cart_products = useSelector(state => state.cartList) ; 
     let favList = useSelector(state => state.favList) ; 
+
     useEffect(() => {
         if (cookie.get("token")) context.setValue(true) ;
         if (window.innerWidth >= 568) setMenuDisplay("flex")
         else setMenuDisplay("none")
     } , [])
+    
     window.onresize = function() {
         if (window.innerWidth >= 568) setMenuDisplay("flex")
         else setMenuDisplay("none")

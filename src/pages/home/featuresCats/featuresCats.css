@@ -12,13 +12,17 @@
     gap: 2px;
     padding: 7px 0;
     width: 86px;
-    transition: .3s;
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
 }
 .featuresCats .category:nth-child(1) {
-    box-shadow: 0px 0px 10px #afafa5;
+    box-shadow: 1px 1px 1px 1px #939393;
 }
 .featuresCats .category:hover {
-    box-shadow: 0px 0px 10px #afafa5;
+    margin-top: -10px;
 }
 .featuresCats img{
     width: 50px;

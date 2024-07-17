@@ -1,6 +1,6 @@
 import { Container } from "react-bootstrap";
 import Newsletter from "../../../components/newsletter/NewsLetter";
-import './section.css' ; 
+import './newsLetterFooter.css' ; 
 export default function NewsLetterFooter() {
     return (
         <Container fluid = "xxl">

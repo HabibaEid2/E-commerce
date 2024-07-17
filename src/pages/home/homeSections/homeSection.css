@@ -12,13 +12,21 @@
     gap: 10px;
     margin: 20px 0;
     position: relative;
-    transition: .4s;
     top: 0;
     font-size: 15px;
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
 }
 .homeSections .element:hover {
-    transition: .5s;
     top: -10px;
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
 }
 .homeSections img {
     width: 77px;

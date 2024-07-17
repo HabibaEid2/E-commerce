@@ -10,7 +10,11 @@
 }
 .register [role = "alert"] {
     position: absolute;
-    transition: .3s;
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
 }
 .register form {
     background-color: white;
@@ -56,7 +60,11 @@
     padding: 7px;
     margin: 20px auto;
     width: 95%;
-    transition: .2s;
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
 }
 .register form button:hover {
     color: var(--main-color);

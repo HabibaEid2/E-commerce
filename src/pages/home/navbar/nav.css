@@ -15,20 +15,8 @@
     border-radius: 14px;
 }
 .carousel .carousel-caption {
-    padding: 3.25rem;
-    bottom: 0;
-    left: 0;
-}
-.newsLetterSection {
-    position: relative;
-    left: 0;
-    bottom: 0;
-    text-align: left;
-}
-.newsLetterSection h3{
-    color: var(--font-color);
-    font-size: 6vw;
-    padding: 20px;
+    position: static;
+    padding: 30px 20px;
 }
 .navBar .carousel .carousel-caption a {
     background-color: var(--main-color);
@@ -42,29 +30,4 @@
     height: 10px;
     border: solid 1px black;
     border-radius: 50%;
-}
-.newsLetterSection form {
-    background-color: white;
-    width: fit-content;
-    border-radius: 27px;
-    padding-left: 15px;
-    margin: 15px 30px;
-}
-.newsLetterSection form img {
-    width: 24px;
-    margin-right: 12px;
-}
-.newsLetterSection input {
-    background-color: transparent;
-    border: none;
-    outline: none;
-    padding: 15px 0;
-}
-.newsLetterSection form button {
-    background-color: var(--main-color);
-    border: none;
-    outline: none;
-    color: white;
-    padding: 15px;
-    border-radius: 29px;
 }

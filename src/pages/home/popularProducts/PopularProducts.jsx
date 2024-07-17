@@ -36,20 +36,20 @@ export default function PopularProducs() {
                 })
             }
         }
-            
-        
     } , [])
 
+    useEffect(() => {
     // but active class to lis'.
-    let ulInHTML = document.querySelectorAll("ul li") ; 
-        for(let i of ulInHTML) {
-            i.addEventListener("click" , () => {
-                for(let i of ulInHTML) {
-                    i.classList.remove("click")
-                }
-                i.classList.add("click") 
-            })
+    let ulInHTML = ulRef.current.querySelectorAll(".popular-products ul li")
+    for(let i of ulInHTML) {
+        i.onclick = () => {
+            for(let i of ulInHTML) {
+                i.classList.remove("click") ; 
+            }
+            i.classList.add("click")
         }
+    }
+    })
     
     return(
         <div className='popular-products'>

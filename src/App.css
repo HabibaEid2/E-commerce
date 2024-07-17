@@ -46,6 +46,11 @@ a {
     text-decoration: none;
     color: inherit;
 }
+button:active {
+    background-color: var(--babyGreen-color) !important;
+    border-color: var(--main-color);
+    color: var(--main-color) !important;
+}
 .p-color {
     color: var(--p-color);
 }

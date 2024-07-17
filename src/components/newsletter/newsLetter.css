@@ -1,0 +1,55 @@
+.newsLetterSection {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    text-align: left;
+}
+.newsLetterSection h3{
+    color: var(--font-color);
+    font-size: 5vw;
+    padding: 20px 0;
+    width: 70%;
+}
+.newsLetterSection form {
+    background-color: white;
+    width: fit-content;
+    border-radius: 27px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+.newsLetterSection form div {
+    background-color: white;
+    border-radius: 27px;
+    padding: 1px 10px;
+}
+.newsLetterSection form img {
+    width: 24px;
+    margin-right: 12px;
+}
+.newsLetterSection input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 15px 0;
+}
+.newsLetterSection form button {
+    background-color: var(--main-color);
+    border: none;
+    outline: none;
+    color: white;
+    padding: 15px;
+    border-radius: 29px;
+}
+
+@media (max-width : 567px) {
+    .newsLetterSection h3 {
+        width: 100%;
+    }
+}
+@media (max-width : 620px) {
+    .newsLetterSection form {
+        background-color: transparent;
+        gap: 10px;
+    }
+}

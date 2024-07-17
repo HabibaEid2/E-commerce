@@ -8,14 +8,6 @@ import { useDispatch, useSelector} from 'react-redux';
 import { addToCartA, addToFavListA, removeFromCartA, removeFromFavListA } from '../../redux/reducer';
 
 export default function Product() {
-    useEffect(() => {
-        window.scrollTo({
-            top : 0 , 
-            left : 0 , 
-            behavior : "instant"
-        }) ; 
-    } , [])
-    
     let location = +window.location.href.slice(window.location.href.lastIndexOf('/') + 1) ; 
     let [productObj , setProductObj] = useState({}) ; 
     let [active , setActive] = useState(0) ; 
@@ -27,7 +19,14 @@ export default function Product() {
     let indexInFav = favList.findIndex((ele) => ele.props.id === location) ; 
     let weight = [] ; 
     let weightSection ; 
+
     useEffect(() => {
+        window.scrollTo({
+            top : 0 , 
+            left : 0 , 
+            behavior : "instant"
+        }) ; 
+        
         for(let i of data.productData) {
             for(let j of i.items) {
                 for(let r of j.products) {
