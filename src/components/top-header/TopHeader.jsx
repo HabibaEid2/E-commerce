@@ -39,7 +39,7 @@ export default function Top_Header() {
     return(
         <header>
             <Container fluid = "xxl">
-                <Link to={'./'}>
+                <Link to={'/E-commerce'}>
                     <img src={logo} alt="logo"/>
                 </Link>
                 <div className="smallMenu" onClick={clickMenu}>
@@ -104,8 +104,9 @@ export default function Top_Header() {
                             </Modal>
                         </div>
 
-                        {context.value ? <Button className="btn mainButton sign-in" onClick={logout}>log out</Button> : 
-                        <Link to = "sign-in">
+                        {context.value ? 
+                        <Button className="btn mainButton sign-in" onClick={logout}>log out</Button> : 
+                        <Link to = "E-commerce/sign-in">
                             <Button className="btn sign-in">sign in</Button>
                         </Link> 
                     }

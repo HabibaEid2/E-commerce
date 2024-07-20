@@ -17,7 +17,7 @@ export default function FeaturesCats$Adds() {
             else fashionNums += j.products.length ; 
         }
         featursArr.push(
-            <Link to = {`/cat/${i.cat_name}`}>
+            <Link to = {`/E-commerce/cat/${i.cat_name}`}>
                 <div key={data.productData.indexOf(i)} className="category" style={{backgroundColor : (i.cat_name == "groceries") ? "#fffceb" : i.cat_name == "Electronics" ? "rgb(236, 255, 236)" : "rgb(254, 239, 234)"}}>
                     <img src={i.image}/>
                     <div className="cat-title">{i.cat_name}</div>

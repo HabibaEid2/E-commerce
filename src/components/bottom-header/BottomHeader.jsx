@@ -2,7 +2,7 @@ import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import './bottom_header.css'
 import { useDispatch } from "react-redux";
-import { productsA } from "../../redux/reducer";
+import { listsOfProductsA } from "../../redux/reducer";
 export default function BottomHeader() {
     let dispatch = useDispatch() ; 
     return (
@@ -22,10 +22,16 @@ export default function BottomHeader() {
                     <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
                         <div>
-                            <Link to = "/">Home</Link>
-                            <Link onClick={() => dispatch(productsA({ catName : "groceries", subCat : "all"}))} to = "cat/groceries">Grocerires</Link>
-                            <Link onClick={() => dispatch(productsA({ catName : "Electronics", subCat : "all"}))} to= "cat/Electronics">Electronics</Link>
-                            <Link onClick={() => dispatch(productsA({ catName : "Fashion", subCat : "all"}))} to= "cat/Electronics">Fashion</Link>
+                            <Link to = "E-commerce">Home</Link>
+                            <Link 
+                                onClick={() => dispatch(listsOfProductsA({ catName : "groceries", subCat : "all"}))} 
+                                to = "E-commerce/cat/groceries">Grocerires</Link>
+                            <Link 
+                                onClick={() => dispatch(listsOfProductsA({ catName : "Electronics", subCat : "all"}))}
+                                to= "E-commerce/cat/Electronics">Electronics</Link>
+                            <Link 
+                                onClick={() => dispatch(listsOfProductsA({ catName : "Fashion", subCat : "all"}))} 
+                                to= "E-commerce/cat/Fashion">Fashion</Link>
                         </div>
 
                         <div className="contact">

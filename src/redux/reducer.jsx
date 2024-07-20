@@ -2,11 +2,12 @@ import { createSlice } from "@reduxjs/toolkit"
 import {bestSellsA,  dalsApulses } from "./actions"
 import data from "../data/data"
 import ProductCard from "../components/card/ProductCard";
-export const productsData = createSlice({
-    name : [] , 
-    initialState : dalsApulses, 
+
+export const listsOfProducts = createSlice({
+    name : "listsOfProducts" , 
+    initialState : dalsApulses , 
     reducers : {
-        productsA : (state , action) => {
+        listsOfProductsA : (state , action) => {
             let index = data.productData.findIndex(ele => ele.cat_name === action.payload.catName) ; 
             let subCat = action.payload.subCat ; 
             state = [] ; 
@@ -34,7 +35,6 @@ export const productsData = createSlice({
         } 
     } 
 })
-
 export const bestSells = createSlice({
     name : "bestSells" , 
     initialState : [] , 
@@ -76,7 +76,7 @@ export const favList = createSlice({
         }
     }
 })
-export let {productsA} = productsData.actions ; 
+export let {listsOfProductsA} = listsOfProducts.actions ; 
 export let {bestSellsF} = bestSells.actions ;
 export let {addToCartA , removeFromCartA} = cartList.actions ; 
 export let {addToFavListA , removeFromFavListA} = favList.actions ; 

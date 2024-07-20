@@ -1,10 +1,10 @@
 import { applyMiddleware, configureStore  } from "@reduxjs/toolkit";
-import {favList, bestSells, cartList, productsData} from "./reducer";
+import {favList, bestSells, cartList, listsOfProducts} from "./reducer";
 import { thunk } from "redux-thunk";
 
 export const store = configureStore({
     reducer : {
-        productsData : productsData.reducer , 
+        listsOfProducts : listsOfProducts.reducer , 
         bestSells : bestSells.reducer , 
         cartList : cartList.reducer , 
         favList : favList.reducer , 
