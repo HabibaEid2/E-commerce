@@ -48,7 +48,7 @@ export default function Top_Header() {
                     <span></span>
                 </div>
                 <div className="content" style={{display : menuDisplay}}>
-                    <CloseButton onClick={removeMenu} variant={"coool"}/>
+                    <CloseButton onClick={removeMenu}/>
                     <div className="userState">
                         <div className="favList">
                             <Button className = "btn mainButton" onClick={() => setShowFav(true)}>

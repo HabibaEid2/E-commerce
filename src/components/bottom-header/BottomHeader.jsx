@@ -12,7 +12,7 @@ export default function BottomHeader() {
                 <Container fluid = "xxl">
 
                     <div className="browse-all">
-                        <i class="fa-solid fa-bookmark"></i>
+                        <i className="fa-solid fa-bookmark"></i>
                         <div className="txt">
                             Browse All Categories
                         </div>
@@ -29,7 +29,7 @@ export default function BottomHeader() {
                         </div>
 
                         <div className="contact">
-                            <i class="fa-solid fa-headphones-simple"></i>
+                            <i className="fa-solid fa-headphones-simple"></i>
                             <div>
                                 <div className="number">1900 - 888</div>
                                 <div className="info">24/7 Support Center</div>

@@ -8,17 +8,17 @@ import { useDispatch, useSelector} from 'react-redux';
 import { addToCartA, addToFavListA, removeFromCartA, removeFromFavListA } from '../../redux/reducer';
 
 export default function Product() {
-    let location = +window.location.href.slice(window.location.href.lastIndexOf('/') + 1) ; 
-    let [productObj , setProductObj] = useState({}) ; 
-    let [active , setActive] = useState(0) ; 
-    let [sizeValue , setSize] = useState() ; 
-    let list = useSelector(state => state.cartList) ; 
-    let favList = useSelector(state => state.favList) ; 
-    let dispatch = useDispatch() ; 
-    let indexInCart = list.findIndex((ele) => ele.props.id === location) ; 
-    let indexInFav = favList.findIndex((ele) => ele.props.id === location) ; 
-    let weight = [] ; 
-    let weightSection ; 
+    const location = +window.location.href.slice(window.location.href.lastIndexOf('/') + 1) ; 
+    const [productObj , setProductObj] = useState({}) ; 
+    const [active , setActive] = useState(0) ; 
+    const [sizeValue , setSize] = useState() ; 
+    const list = useSelector(state => state.cartList) ; 
+    const favList = useSelector(state => state.favList) ; 
+    const dispatch = useDispatch() ; 
+    const indexInCart = list.findIndex((ele) => ele.props.id === location) ; 
+    const indexInFav = favList.findIndex((ele) => ele.props.id === location) ; 
+    const weight = [] ; 
+    const weightSection = null ; 
 
     useEffect(() => {
         window.scrollTo({
@@ -57,12 +57,12 @@ export default function Product() {
             </div>
         }
     }
-    function handleActive(e) {
+    const handleActive = (e) => {
         setActive(e.target.id) ; 
         setSize(e.target.innerHTML) ; 
     }
 
-    function handleAdditionToC () {
+    const handleAdditionToC = ()=> {
         dispatch(addToCartA(
             <CartProduct
                     key = {productObj.id} 
@@ -78,10 +78,10 @@ export default function Product() {
                     /> 
         )) ; 
     }
-    function handleRemoveFromCart() {
+    const handleRemoveFromCart = ()=> {
         dispatch(removeFromCartA(indexInCart)) ; 
     }
-    function handleAdditionToFav() {
+    const handleAdditionToFav = ()=> {
         dispatch(addToFavListA(
             <CartProduct
                     key = {productObj.id} 
@@ -97,7 +97,7 @@ export default function Product() {
                     /> 
         ))
     }
-    function handleRemoveFromFav() {
+    const handleRemoveFromFav = ()=> {
         dispatch(removeFromFavListA(indexInFav))
     }
     return (

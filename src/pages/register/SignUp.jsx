@@ -13,8 +13,8 @@ export default function SignUp() {
     return( 
     <Register 
     operation = "sign up"
-    name = {true}
-    confirm_pass = {true}
+    isNameExist = {true}
+    isConfirmPassExist = {true}
     havingAcc = {false}
     link = "/sign-in"
     />
