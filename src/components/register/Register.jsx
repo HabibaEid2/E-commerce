@@ -181,7 +181,7 @@ export default function Register(props) {
                     </button>
                     <div>
                         <p className="p-color">
-                            {props.havingAcc ? "Not Have an Account" : "Already Have an Account"} <Link to={props.link}>{props.operation === "sign in" ? "sign up" : "sign in"}</Link>
+                            {props.havingAcc ? "Not Have an Account" : "Already Have an Account"} <Link to={`/E-commerce${props.link}`}>{props.operation === "sign in" ? "sign up" : "sign in"}</Link>
                         </p>
                     </div>
                 </form>

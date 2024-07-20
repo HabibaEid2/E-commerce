@@ -42,6 +42,7 @@ export default function CartProduct(props) {
     
     return (
         <Card title={props.description} id={props.id}>
+            <Button title = "remove"><i class="fa-solid fa-trash-can" onClick={getPlace}></i></Button>
             <div>
                 <Card.Img variant="top" src={props.img} />
             </div>
@@ -49,7 +50,9 @@ export default function CartProduct(props) {
                 <Card.Title>
                     <Link to={`products/${props.id}`}>{props.title}</Link>
                 </Card.Title>
-                <Card.Text>{`${props.description.slice(props.title.length , 100)}`}</Card.Text>
+                <Card.Text>
+                    {`${props.description.slice(props.title.length , 100)}`}
+                </Card.Text>
                 <Rate rate = {+props.rating}/>
                 <div className="size">
                     {props.size != undefined && `size : ${props.size}`}
@@ -58,7 +61,6 @@ export default function CartProduct(props) {
                     <div className="newPrice">Rs{props.price}</div>
                     <div className="oldPrice">Rs{props.oldPrice}</div>
                 </div>
-                <Button title = "remove"><i class="fa-solid fa-trash-can" onClick={getPlace}></i></Button>
             </Card.Body>
         </Card>
 )

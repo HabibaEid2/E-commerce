@@ -5,6 +5,7 @@
 .modal-body {
     max-height: 60vh;
     overflow: auto;
+    margin-bottom: 25px;
 }
 .modal-content .modal-footer button {
     padding: 0;

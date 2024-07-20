@@ -3,10 +3,10 @@
 }
 .register .content {
     background-color: #f1f1f1;
-    height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 55px;
 }
 .register [role = "alert"] {
     position: absolute;
@@ -22,6 +22,7 @@
     padding: 20px;
     border-radius: 10px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    margin: 20px;
 }
 .register form h2 {
     font-size: 27px;
@@ -31,7 +32,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
     position: relative;
     gap: 20px;
     margin-top: 17px;
@@ -99,4 +99,13 @@
 }
 .register form .sign-up:hover {
     text-decoration: underline;
+}
+@media (max-width : 567px) {
+    .register form > div {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .register form i {
+        top: 56px;
+    }
 }

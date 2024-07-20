@@ -11,7 +11,7 @@ export default function Newsletter(props) {
                         <img src={papper_plane_img} alt="send icon" />
                         <input type="email" placeholder='Your email address'/>
                     </div>
-                    <button type="submit">Subscribe</button>
+                    <button type="submit" onClick={(e) => e.preventDefault()}>Subscribe</button>
                 </form>
             </div>
         </div>

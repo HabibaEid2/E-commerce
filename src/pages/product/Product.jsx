@@ -17,8 +17,8 @@ export default function Product() {
     const dispatch = useDispatch() ; 
     const indexInCart = list.findIndex((ele) => ele.props.id === location) ; 
     const indexInFav = favList.findIndex((ele) => ele.props.id === location) ; 
-    const weight = [] ; 
-    const weightSection = null ; 
+    let weight = [] ; 
+    let weightSection = null ; 
 
     useEffect(() => {
         window.scrollTo({
@@ -57,12 +57,12 @@ export default function Product() {
             </div>
         }
     }
-    const handleActive = (e) => {
+    function handleActive (e) {
         setActive(e.target.id) ; 
         setSize(e.target.innerHTML) ; 
     }
 
-    const handleAdditionToC = ()=> {
+    function handleAdditionToC () {
         dispatch(addToCartA(
             <CartProduct
                     key = {productObj.id} 
@@ -78,10 +78,10 @@ export default function Product() {
                     /> 
         )) ; 
     }
-    const handleRemoveFromCart = ()=> {
+    function handleRemoveFromCart () {
         dispatch(removeFromCartA(indexInCart)) ; 
     }
-    const handleAdditionToFav = ()=> {
+    function handleAdditionToFav () {
         dispatch(addToFavListA(
             <CartProduct
                     key = {productObj.id} 
@@ -97,7 +97,7 @@ export default function Product() {
                     /> 
         ))
     }
-    const handleRemoveFromFav = ()=> {
+    function handleRemoveFromFav () {
         dispatch(removeFromFavListA(indexInFav))
     }
     return (
