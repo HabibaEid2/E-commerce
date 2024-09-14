@@ -8,6 +8,7 @@
     position: sticky;
     top: 70px;
     height: fit-content;
+    border-right: solid 1px #aeaeae5e;
 }
 .items .dashboard .dash-section {
     display: block;
@@ -36,9 +37,11 @@
     display: flex;
     justify-content: space-between;
     padding: 7px;
-    border: solid 1px #e8e8e8;
+    /* border: solid 1px #e8e8e8; */
     margin: 10px 0;
-    border-radius: 3px;
+    /* border-radius: 3px; */
+    border-top: solid 1px #d6d6d6;
+    border-bottom: solid 1px #d6d6d6;
 }
 .items .dashboard .cat-name {
     display: flex;

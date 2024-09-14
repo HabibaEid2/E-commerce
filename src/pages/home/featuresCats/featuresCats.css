@@ -18,9 +18,6 @@
     -ms-transition: var(--transition);
     -o-transition: var(--transition);
 }
-.featuresCats .category:nth-child(1) {
-    box-shadow: 1px 1px 1px 1px #939393;
-}
 .featuresCats .category:hover {
     margin-top: -10px;
 }

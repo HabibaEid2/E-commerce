@@ -16,9 +16,12 @@ export default function FeaturesCats$Adds() {
             else if (i.cat_name === "Electronics") eleNums += j.products.length ; 
             else fashionNums += j.products.length ; 
         }
+        console.log('cat_name : ' , i.cat_name)
         featursArr.push(
             <Link to = {`/E-commerce/cat/${i.cat_name}`}>
-                <div key={data.productData.indexOf(i)} className="category" style={{backgroundColor : (i.cat_name == "groceries") ? "#fffceb" : i.cat_name == "Electronics" ? "rgb(236, 255, 236)" : "rgb(254, 239, 234)"}}>
+                <div key={data.productData.indexOf(i)} className="category" 
+                style={{backgroundColor : i.cat_name.includes("groceries") ? "rgb(240 194 137 / 42%)" :
+                i.cat_name == "Electronics" ? "rgb(187 233 193 / 67%)" : "rgb(210 204 255 / 76%)"}}>
                     <img src={i.image}/>
                     <div className="cat-title">{i.cat_name}</div>
                     <div className="productsNum">{(i.cat_name == "groceries") ? groceriesNum : i.cat_name == "Electronics" ? eleNums : fashionNums}</div>
